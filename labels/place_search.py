@@ -15,6 +15,9 @@ def get_places(lat, lng, radius, data={}, overwrite_labels=False, min_results=20
     results = res["results"]
 
     while(len(results) < min_results):
+        if not 'next_page_token' in res:
+            break
+        
         page_token = res['next_page_token']
         url = f'https://maps.googleapis.com/maps/api/place/nearbysearch/json?pagetoken={page_token}&key={API_KEY}'
         response = requests.get(url)
