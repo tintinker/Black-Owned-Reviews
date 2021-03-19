@@ -1,5 +1,7 @@
 # Black-Owned-Reviews
 
+Will update this to be more extensive!!  
+
 Add cities to labels/citylist.txt  
 Create virtual environment  
 Install requirements.txt  
