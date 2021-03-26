@@ -16,7 +16,7 @@ Note: `$` indicates a shell command. This assumes you're using a mac with virtua
 `(env) $ touch secrets.py`
 6. Add your api keys to the secrets file  
 ----
-secrets.py
+secrets.py  
 PLACES\_API\_KEY = 'Abcdef1234g' (for the place search api)   
 VIZ\_API\_KEY = 'Xyzcdef789g' (for the maps javascript api)   
 
@@ -39,12 +39,13 @@ If not: `$ source env/bin/activate`
 1. Add a list of cities to a text file  
 `(env) $ touch citylist.txt`   
 ----
-citylist.txt
+citylist.txt  
 
-San Antonio
-Chicago
-Atlanta
-Salt Lake City
+San Antonio  
+Chicago  
+Atlanta  
+Salt Lake City  
+
 ----
 2. Run `start.py`  
 Ex. `(env) $ python3 start.py --cache-file "data/citydata.json" citylist.txt`  
@@ -57,28 +58,28 @@ usage: start.py [-h] [--no-cache-places] [--cache-cities]
                 [--output-name OUTPUT_NAME]
                 citylist
 
-Google Maps Labels Data Collection
+Google Maps Labels Data Collection  
 
-positional arguments:
+positional arguments:  
   citylist              File containing list of cities (one per line) to
                         process
 
-optional arguments:
-  -h, --help            show this help message and exit
+optional arguments:  
+  -h, --help            show this help message and exit  
   --no-cache-places     If false (default), it will not update the data for a
-                        given restaurant if it is already present in the cache
+                        given restaurant if it is already present in the cache  
   --cache-cities        If true, it will not update the list of restaurants in
-                        a city if it is already present in the cache
+                        a city if it is already present in the cache  
   --cache-file CACHE_FILE
-                        Required if cache cities or cache places is true
-  --headless            Run selenium headless or not
+                        Required if cache cities or cache places is true  
+  --headless            Run selenium headless or not  
   --max-places MAX_PLACES
-                        Maximum number of restaurants to process per city
+                        Maximum number of restaurants to process per city  
   --log-level {INFO,DEBUG}
-                        Run debug for more detailed information
+                        Run debug for more detailed information  
   --output-name OUTPUT_NAME
                         Basename of output files (csv and json extensions
-                        added)
+                        added)  
 
 ----
 3. Output available in csv and json in root directory
