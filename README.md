@@ -19,6 +19,7 @@ Note: `$` indicates a shell command. This assumes you're using a mac with virtua
 secrets.py
 PLACES\_API\_KEY = 'Abcdef1234g' (for the place search api)   
 VIZ\_API\_KEY = 'Xyzcdef789g' (for the maps javascript api)   
+
 ----
 
 You should be good to go!
@@ -61,7 +62,7 @@ Google Maps Labels Data Collection
 positional arguments:
   citylist              File containing list of cities (one per line) to
                         process
-                        
+
 optional arguments:
   -h, --help            show this help message and exit
   --no-cache-places     If false (default), it will not update the data for a
@@ -78,5 +79,6 @@ optional arguments:
   --output-name OUTPUT_NAME
                         Basename of output files (csv and json extensions
                         added)
+
 ----
 3. Output available in csv and json in root directory
