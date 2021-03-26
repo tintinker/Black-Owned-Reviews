@@ -55,7 +55,7 @@ for city in data:
             place["place_id"], 
             place["rating"], 
             place["num_ratings"], 
-            place["labels"]["success"], 
+            not place["labels"]["success"], 
             place["labels"]["lgbtq"] if 'lgbtq' in place["labels"] else False,  
             place["labels"]["veteran"] if 'veteran' in place["labels"] else False,  
             place["labels"]["women"] if 'women' in place["labels"] else False,  
