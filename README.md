@@ -17,7 +17,6 @@ Note: `$` indicates a shell command. This assumes you're using a mac with virtua
 6. Add your api keys to the secrets file  
 ----
 secrets.py
-
 PLACES\_API\_KEY = 'Abcdef1234g' (for the place search api)   
 VIZ\_API\_KEY = 'Xyzcdef789g' (for the maps javascript api)   
 ----
@@ -61,8 +60,7 @@ Google Maps Labels Data Collection
 
 positional arguments:
   citylist              File containing list of cities (one per line) to
-                        proces
-
+                        process
 optional arguments:
   -h, --help            show this help message and exit
   --no-cache-places     If false (default), it will not update the data for a
