@@ -61,6 +61,7 @@ Google Maps Labels Data Collection
 positional arguments:
   citylist              File containing list of cities (one per line) to
                         process
+                        
 optional arguments:
   -h, --help            show this help message and exit
   --no-cache-places     If false (default), it will not update the data for a
