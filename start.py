@@ -36,7 +36,7 @@ with open(args.citylist) as f:
         try:
             run_city(line.strip(), cache_places=args.cache_places, cache_cities=args.cache_cities, cache_file=cache_file, debug=debug, max_results=args.max_places)
         except Exception as e:
-            log.error(f"Error running {line}: ", e)
+            log.error(f"Error running {line}: {e}")
             continue
 
 with open(cache_file) as f:
