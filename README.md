@@ -36,7 +36,7 @@ Example: ![Alt](/viz_example.png "Geo Example")
 ## Run the scraper
 *Important: make sure the virtual environment is activated (you should see (env) in the terminal)*  
 If not: `$ source env/bin/activate`  
-1. Add a list of cities to a text file  
+1. **Add a list of cities to a text file**  
 `(env) $ touch citylist.txt`   
 ----
 citylist.txt  
@@ -47,7 +47,7 @@ Atlanta
 Salt Lake City  
 
 ----
-2. Run `start.py`  
+2. **Run `start.py`**  
 Ex. `(env) $ python3 start.py --cache-file "data/citydata.json" citylist.txt`  
 Ex. `(env) $ python3 start.py --no-cache-places citylist.txt`  
 Full options:  
@@ -82,4 +82,4 @@ optional arguments:
                         added)  
 
 ----
-3. Output available in csv and json in root directory
+3. **Output available in csv and json in root directory**
