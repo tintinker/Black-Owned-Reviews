@@ -45,10 +45,22 @@ with open(cache_file) as f:
 with open(args.output_name + ".json", "w+") as f:
     f.write(json.dumps(data))
 
-places_data = pd.DataFrame(columns=['city','name', 'place_id', 'types', 'avg_rating', 'num_ratings', 'labels'])
+places_data = pd.DataFrame(columns=['city','name', 'place_id', 'avg_rating', 'num_ratings', 'labels_error', 'lgbtq','veteran','women','black', 'types'])
 for city in data:
     for place_name in data[city]:
         place = data[city][place_name]
-        arr = [city, place["name"], place["place_id"], place["types"], place["rating"], place["num_ratings"], place["labels"]]
+        arr = [
+            city, 
+            place["name"], 
+            place["place_id"], 
+            place["rating"], 
+            place["num_ratings"], 
+            place["labels"]["success"], 
+            place["labels"]["lgbtq"] if 'lgbtq' in place["labels"] else False,  
+            place["labels"]["veteran"] if 'veteran' in place["labels"] else False,  
+            place["labels"]["women"] if 'women' in place["labels"] else False,  
+            place["labels"]["black"] if 'black' in place["labels"] else False,  
+            place["types"], 
+        ]
         places_data.loc[len(places_data)] = arr
 places_data.to_csv(args.output_name + ".csv")
