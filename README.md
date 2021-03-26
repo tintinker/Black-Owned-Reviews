@@ -51,7 +51,7 @@ Salt Lake City
 *Important! Must include the `PATH=$PATH:.` exactly as written at the beginning or else selenium won't be able to find the chrome driver*  
 Ex. `(env) $ PATH=$PATH:. python3 start.py --cache-file "data/citydata.json" citylist.txt`  
 Ex. `(env) $ PATH=$PATH:. python3 start.py --no-cache-places citylist.txt`  
-Ex. `(env) $ PATH=$PATH:. python3 start.py --no-cache-places --headless --output new_output --max-places 2 --log-level DEBUG citylist.txt`
+Ex. `(env) $ PATH=$PATH:. python3 start.py --no-cache-places --headless --output new_output --max-places 2 --log-level DEBUG citylist.txt`  
 Full options:  
 ----
 usage: start.py [-h] [--no-cache-places] [--cache-cities]
