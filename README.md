@@ -72,7 +72,7 @@ optional arguments:
                         a city if it is already present in the cache  
   --cache-file CACHE_FILE
                         Required if cache cities or cache places is true  
-  --headless            Run selenium headless or not  
+  --headless            Run selenium headless (unsure if it works headless yet)  
   --max-places MAX_PLACES
                         Maximum number of restaurants to process per city  
   --log-level {INFO,DEBUG}
