@@ -18,8 +18,8 @@ Note: `$` indicates a shell command. This assumes you're using a mac with virtua
 ----
 secrets.py
 
-PLACES_API_KEY = 'Abcdef1234g' (for the place search api)
-VIZ_API_KEY = 'Xyzcdef789g' (for the maps javascript api)
+PLACES_API_KEY = \'Abcdef1234g\' (for the place search api)
+VIZ_API_KEY = \'Xyzcdef789g\' (for the maps javascript api)
 ----
 
 You should be good to go!
