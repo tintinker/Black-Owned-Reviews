@@ -1,8 +1,7 @@
 import pandas as pd
-from urllib.request import urlopen
 from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.utils import ChromeType
 import time
 
 
@@ -12,7 +11,6 @@ def init_webdriver():
     options.add_argument('--incognito')
     options.add_argument('--headless') 
     options.add_argument('--lang=en_US')  # needs this if not headless will not work 
-    options.add_argument("--height=1000")
     driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     return driver
 
@@ -43,20 +41,27 @@ def get_city(city_url, city_name):
         print('something wrong, not enough business cards!')
         return
     
-    business_directory = pd.DataFrame(columns=["business_name", "address", "business_type", "website", "city_name"])
+    business_directory = pd.DataFrame(columns=["business_name", "address", "zipcode", "business_type", "website", "city_name"])
+    driver.implicitly_wait(5)
     for card in business_cards:
-        business_name = card.find_element_by_class_name('_29upa').text
-        address = card.find_element_by_class_name('_3ytiC').text
-        business_type = card.find_element_by_class_name('_2PVWy').text
-        website = card.find_element_by_tag_name('a').get_attribute('href')
-        business_dict = {"business_name": business_name, "address": address, "business_type": business_type, "website":website, "city_name":city_name}
+        business_name, address, zipcode, business_type, website = "", "", "", "", ""
+        try: 
+            business_name = card.find_element_by_class_name('_29upa').text
+            address = card.find_element_by_class_name('_3ytiC').text.split('\n')[-1]
+            zipcode = address.split(', ')[-1]
+            business_type = card.find_element_by_class_name('_2PVWy').text
+            website = card.find_element_by_link_text('Visit Website').get_attribute('href')
+        except NoSuchElementException:
+            pass        
+        business_dict = {"business_name": business_name, "address": address, "zipcode": zipcode, "business_type": business_type, "website":website, "city_name":city_name}
         business_directory = business_directory.append(business_dict, ignore_index=True)
-    
     driver.close()
     return business_directory
 
-
-city_url = 'https://byblack.us/search/Atlanta--GA/businesses/?query='
-city_name = 'Atlanta, GA'
-atl_directory = get_city(city_url, city_name)
-print(atl_directory)
+ 
+biz_directory = get_city('https://byblack.us/search/Atlanta--GA/businesses/?query=', 'Atlanta')
+biz_directory = biz_directory.append(get_city('https://byblack.us/search/New-York--NY/businesses/?query=', 'New York'))
+biz_directory = biz_directory.append(get_city('https://byblack.us/search/San-Francisco--CA/businesses/?query=', 'San Francisco'))
+biz_directory = biz_directory.append(get_city('https://byblack.us/search/Chicago--IL/businesses/?query=', 'Chicago'))
+biz_directory.reset_index(drop=True, inplace=True)
+biz_directory.to_csv('byblack_directory.csv')

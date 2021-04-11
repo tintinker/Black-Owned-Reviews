@@ -1,3 +1,4 @@
 # Pipeline for scraping byblack directory
  
-19/3: working on getting scraper to work in headless mode; next steps are to cross check w main pipeline code to see how to call api
+* `byblack-scraper.py` uses selenium to scrape the search directory of businesses on https://byblack.us/ 
+*  the output file `byblack_directory.csv` contains the business for the cities of Atlanta, SF, Chicago, and NYC

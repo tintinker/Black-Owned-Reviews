@@ -1,0 +1,549 @@
+,business_name,address,zipcode,business_type,website,city_name
+0,Sweet Georgia's Juke Joint,"200 Peachtree Street, GA 30303",GA 30303,"Restaurant, Bar",https://www.sweetgeorgiasjukejoint.com/,Atlanta
+1,"Dawson's Management, Inc","50 Hurt Plaza Ste 1436, GA 30303",GA 30303,Misc. Professional Services,https://www.dawsonsmanagement.com/,Atlanta
+2,"Elite World Staffing & Training, LLC","135 Auburn Ave NE, GA 30303",GA 30303,Misc. Professional Services,https://ewstaffing.business.site/,Atlanta
+3,Mangos Caribbean Restaurant,"180 Auburn Avenue Northeast, GA 30303",GA 30303,"Restaurant, Caribbean",https://www.mangoscaribbeanrestaurant.com/,Atlanta
+4,Bqe Lounge,"262 Edgewood Avenue Northeast, GA 30303",GA 30303,"Restaurant, Soul Food",https://www.bqelounge.com/,Atlanta
+5,Old Lady Gang,"177 Peters Street Southwest, GA 30313",GA 30313,"Restaurant, Soul Food",https://oldladygang.com/,Atlanta
+6,Journey Unlimited,"191 Peachtree St NE None, GA 30303",GA 30303,Other,https://journeyunlimited.com/,Atlanta
+7,Blue Scorpion Reputation Management,"191 Peachtree St 49th Floor, GA 30303",GA 30303,Marketing & PR,https://www.bluereputaion.today/,Atlanta
+8,JAE Financial Group,"191 Peachtree St NE Ste 3975, GA 30303",GA 30303,Other,https://none/,Atlanta
+9,Bryant Group Ventures,"191 Peachtree Street NE Suite 3840, GA 30313",GA 30313,Financial Services,https://www.bryantgroupventures.com/,Atlanta
+10,"Georgia Team Builders, LLC","314 Auburn Avenue None, GA 30303",GA 30303,Entertainment & Media,https://atlantaroomescape.com/,Atlanta
+11,Citizens Trust Bank,"230 Peachtree St, NW, GA 30303",GA 30303,Bank,https://ctbconnect.com/,Atlanta
+12,Harold's Chicken & Bar,"349 Edgewood Avenue Southeast, GA 30312",GA 30312,"Restaurant, Fast Food",https://www.haroldschickenatl.com/,Atlanta
+13,Allen Reid Enterprises,"234 Peachtree St Ne Suite 400, GA 30303",GA 30303,Misc. Professional Services,https://allenreidenterprises.com/,Atlanta
+14,Fin & Feathers,"360 Edgewood Avenue Southeast, GA 30312",GA 30312,"Seafood, Bar, Dining, Restaurant, Soul Food",https://www.finandfeathersrestaurants.com/,Atlanta
+15,Jutox Bar Castleberry Hill,"239 Walker Street Southwest, GA 30313",GA 30313,"Restaurant, Juice Bar",https://jutoxbarcastleberry.com/,Atlanta
+16,"SeeJones Creative, LLC","318 Cherokee Avenue SE Suite #104, GA 30312",GA 30312,Business Services,https://www.seejoneswork.com/,Atlanta
+17,Rosie's Coffee Café,"48 Northside Drive Southwest, GA 30313",GA 30313,"Restaurant, Coffee Shop, Cafe",https://www.rosiescoffeecafe.com/,Atlanta
+18,"Tom, Dick & Hank","191 Ralph David Abernathy Boulevard Southwest, GA 30312",GA 30312,"Restaurant, Bbq",https://tomdickandhank.com/,Atlanta
+19,Nowell Sparks LLC,"303 W Peachtree St NW #4340, GA 30308",GA 30308,Legal Services,https://none/,Atlanta
+20,Slutty Vegan Atl,"476 Edgewood Avenue Southeast, GA 30312",GA 30312,"Restaurant, Vegan, Fast Food",https://sluttyveganatl.com/,Atlanta
+21,Dumas Edwards LLC,"321 Pavillion St. SE None, GA 30315",GA 30315,Misc. Professional Services,https://dumasedwards.com/,Atlanta
+22,Alonzo F. and Norris B. Herndon Foundation,"587 University Place NW None, GA 30314",GA 30314,Entertainment & Media,https://www.herndonhome.org/,Atlanta
+23,Atlanta Breakfast Club,"249 Ivan Allen Junior Boulevard Northwest, GA 30313",GA 30313,"Restaurant, Casual",https://atlantabreakfastclub.com/,Atlanta
+24,Slim & Husky’s Pizza Beeria,"581 Metropolitan Parkway Southwest, GA 30310",GA 30310,"Restaurant, Fast Casual",https://slimandhuskys.com/,Atlanta
+25,"Pearls Of Esther, Inc","530 Piedmont Avenue NE Apt 507, GA 30308",GA 30308,Other,https://www.pearlsofesther.com/,Atlanta
+26,The Dokter's Office Barbershop & Apprenticeship,"Magnolia St NW, GA 30314",GA 30314,Grooming,https://www.thefadedr.com/,Atlanta
+27,Pivotal Performance Group,"384 Northyards Blvd NW None, GA 30313",GA 30313,Misc. Professional Services,https://pivotalperformance.net/,Atlanta
+28,The ADS Agency,"384 Northyards Blvd Suite 190, GA 30313",GA 30313,Business Services,https://theadsagency.co/,Atlanta
+29,"CMBC Wellness, LLC","384 Northyards Blvd Ste 100, #72, GA 30033",GA 30033,Healthcare,https://www.monicabey.com/,Atlanta
+30,Atlanta Black Chambers,"384 Northyards Blvd NW Suite 100, GA 30313",GA 30313,Other,https://atlantablackchambers.org/,Atlanta
+31,Essential Wealth Management,"384 Northyards Blvd. N.W. Bldg 100 #65, GA 30313",GA 30313,Financial Services,https://www.essentialwealthmanagement.com/,Atlanta
+32,Just Add Honey Tea Company,"684 John Wesley Dobbs Avenue Northeast, GA 30312",GA 30312,"Restaurant, Coffee Shop, Cafe",https://justaddhoney.net/,Atlanta
+33,The Busy Bee Café,"810 Martin Luther King Junior Drive Southwest, GA 30314",GA 30314,"Restaurant, Soul Food",https://www.thebusybeecafe.com/,Atlanta
+34,Eat My Taco,"777 Oak Street Southwest, GA 30310",GA 30310,"Restaurant, Ethnic, Fast Casual",https://www.eatmytacoatl.com/,Atlanta
+35,A Haute Cookie,"1039 Grant Street Southeast, GA 30315",GA 30315,"Restaurant, Bakery",https://www.ahautecookie.com/,Atlanta
+36,Yaaas! Cookies,"880 Glenwood Avenue Southeast, GA 30316",GA 30316,"Restaurant, Bakery",https://yaaascookies.com/,Atlanta
+37,Wadada Healthy Market & Juice Bar,"878 Ralph David Abernathy Boulevard, GA 30310",GA 30310,"Restaurant, Market, Vegan, Juice Bar",,Atlanta
+38,Citizens Trust Bank,"965 MLK Jr Dr, NW, GA 30314",GA 30314,Bank,https://ctbconnect.com/,Atlanta
+39,Experimac Midtown Atlanta,"800 Peachtree St. NE Unit D, GA 30308",GA 30308,Technology,https://experimac.com/midtown-atlanta-ga/,Atlanta
+40,The Wellness Sanctuary,"828 Ralph Mcgill Blvd Ste 204, GA 30306",GA 30306,Health and Wellness,https://www.thewellnesssanctuaryinc.com/,Atlanta
+41,Tassili's Raw Reality Café,"1059 Ralph David Abernathy Boulevard, GA 30310",GA 30310,"Restaurant, Event Space, Vegan, Healthy Food, Fast Casual",https://www.tassilisrawreality.com/,Atlanta
+42,Qt Time Restaurant,"1120 Ralph David Abernathy Boulevard Southwest, GA 30310",GA 30310,"Restaurant, Soul Food",https://www.qtimerestaurant.com/,Atlanta
+43,Hodgepodge Coffeehouse,"1 Moreland Avenue Southeast, GA 30317",GA 30317,"Caribbean, Bakery, Coffee Shop, Cafe, Restaurant",https://hodgepodgecoffee.com/,Atlanta
+44,Bad Gyal Vegan,"1038 White Street Southwest, GA 30310",GA 30310,"Restaurant, Caribbean, Vegan, Catering",https://badgyalvegan.com/,Atlanta
+45,Urban Grind,"962 Marietta Street NorthWest, GA 30318",GA 30318,"Restaurant, Bakery, Coffee Shop",https://urbangrindatlanta.com/,Atlanta
+46,Triple Jay’s Pizza,"1020 Piedmont Avenue Northeast, GA 30309",GA 30309,"Restaurant, Fast Food",https://www.triplejayspizza.com/,Atlanta
+47,EnrichHER,"1075 Peachtree ST NE None, GA 30309",GA 30309,Financial Services,https://ienrichher.com/,Atlanta
+48,Hodgepodge Coffeehouse,"720 Moreland Avenue Southeast, GA 30316",GA 30316,"Caribbean, Bakery, Coffee Shop, Cafe, Restaurant",https://hodgepodgecoffee.com/,Atlanta
+49,Sublime Donuts,"535 10th Street Northwest, GA 30318",GA 30318,"Restaurant, Bakery, Fast Food",https://www.sublimedoughnuts.com/,Atlanta
+50,The Griffin Firm PLLC,"1100 Peachtree St. NE Suite 200, GA 30309",GA 30309,Business Services,https://thegriffinfirm-pllc.com/,Atlanta
+51,Robinson Law Group,"1100 Peachtree St., Ste 200 None, GA 30309",GA 30309,Legal Services,https://www.rlgcounsel.com/,Atlanta
+52,Pet Yard Indoor Dog Park,"1100 Peachtree St. None, GA 30309",GA 30309,Other,https://petyardindoordogpark.com/,Atlanta
+53,Berkshire Hathaway HomeServices Georgia,"1163 W. Peachtree Street NE Suite 200, GA 30309",GA 30309,Real Estate,https://nkosileary.bhhsgeorgia.com/,Atlanta
+54,Office Building Brokers,"1170 Peachtree Street Suite 1200, GA 30309",GA 30309,Real Estate,https://www.officebuildingbrokers.com/,Atlanta
+55,Slim & Husky’s Pizza Beeria,"1016 Howell Mill Road, GA 30318",GA 30318,"Restaurant, Fast Casual",https://slimandhuskys.com/,Atlanta
+56,Office Building Brokers,"1230 Peachtree St NE Suite 1900, GA 30309",GA 30309,Real Estate,https://www.officebuildingbrokers.com/,Atlanta
+57,Slutty Vegan Atl,"1542 Ralph David Abernathy Boulevard Southwest, GA 30310",GA 30310,"Restaurant, Vegan, Fast Food",https://sluttyveganatl.com/,Atlanta
+58,D Café & Catering,"1550 Ralph David Abernathy Boulevard, GA 30310",GA 30310,"Restaurant, Soul Food, Catering, Cafe",https://dcafeatl.com/,Atlanta
+59,No Label Candle Company,"1314 Brewster St SW, GA 30310",GA 30310,Retail,https://nolabelcandlecompany.com/,Atlanta
+60,Twisted Soul Cookhouse And Pours,"1133 Huff Road Northwest, GA 30318",GA 30318,"Restaurant, Dining",https://www.twistedsoulcookhouseandpours.com/,Atlanta
+61,Spreading The Health,"1995 Metropolitan Parkway Southwest, GA 30315",GA 30315,"Restaurant, Juice Bar, Healthy Food",https://www.spreadingthehealthatl.com/,Atlanta
+62,Geri Gonsalves Fitness LLC,"1745 Peachtree St NE, GA 30309",GA 30309,Other,https://www.geeigonsalvesfitness.com/,Atlanta
+63,Anna's Bbq,"1976 Hosea L Williams Drive Northeast, GA 30317",GA 30317,"Restaurant, Bbq",https://www.annasbbqrestaurantatlanta.com/,Atlanta
+64,Le Petit Marche,"1984 Hosea L Williams Drive Northeast, GA 30317",GA 30317,"Restaurant, Market, Casual",https://www.lepetitmarche.net/,Atlanta
+65,Life Bistro,"2036 Sylvan Road Southwest, GA 30310",GA 30310,"Restaurant, Vegan, Juice Bar, Healthy Food",https://www.lifebistroatl.com/,Atlanta
+66,"Alumni Cheerleaders, LLC","2870 Peachtree Road NW #283, GA 30305",GA 30305,Retail,https://www.alwayscheer.com/,Atlanta
+67,Rosie's Coffee Café,"2330 Sylvan Road, GA 30344",GA 30344,"Restaurant, Coffee Shop, Cafe",https://www.rosiescoffeecafe.com/,Atlanta
+68,The Man Cave Atlanta,"2139 Liddell Dr. None, GA 30324",GA 30324,Personal Care,https://www.mancaveatlanta.com/,Atlanta
+69,Vi Capital Lending Group,"2150 Lenox Road Northeast None, GA 30324",GA 30324,Business Services,https://www.vicapitallending.com/,Atlanta
+70,Yama Elegance,"Rollingwood Lane None, GA 30316",GA 30316,Retail,https://afrikanunity.com/,Atlanta
+71,Everyday Sunday,"2000 Delowe Drive, GA 30311",GA 30311,"Restaurant, Soul Food",https://everydaysundayatl.com/,Atlanta
+72,TWA Management Group Atlanta,"780 Morosgo Dr NE, GA 30324",GA 30324,Misc. Professional Services,https://www.twagroupatl.com/,Atlanta
+73,"White Howard Brands, LLC","2282 Defoor Hills Rd NW, GA 30318",GA 30318,Misc. Professional Services,https://www.whitehowardbrands.com/,Atlanta
+74,"White Howard Brands, LLC","2282 Defoor Hills Rd Suite 180, GA 30318",GA 30318,Other,https://whitehowardbrands.com/,Atlanta
+75,EH Staffing,"160 Clairemont Avenue Suite 200, GA 30030",GA 30030,Healthcare,https://www.ehstaffing.com/,Atlanta
+76,Alliance CPA Group,"160 Clairemont Ave Suite 455, GA 30030",GA 30030,Financial Services,https://www.alliancecpagroup.com/,Atlanta
+77,The Bando,"3050 Martin Luther King Junior Drive Southwest, GA 30311",GA 30311,"Restaurant, Fast Food, Music",https://www.thebandoatl.com/,Atlanta
+78,Ms. Icey's,"1371 Clairmont Road, GA 30033",GA 30033,"Restaurant, Soul Food, Bar",https://www.msiceys.com/,Atlanta
+79,Bespokuture,"1596 W Cleveland Ave, GA 30344",GA 30344,Retail,https://www.bespokuture.com/,Atlanta
+80,Mercedes-Benz of Buckhead,"2799 Piedmont Rd NE, GA 30305",GA 30305,Car Dealership,https://www.buckhead.mercedesdealer.com/,Atlanta
+81,Citizens Trust Bank,"2840 East Point Street, GA 30344",GA 30344,Bank,https://ctbconnect.com/,Atlanta
+82,Silver's Delights All Natural Juice And Caribbean Restaurant,"2879 East Point Street, GA 30344",GA 30344,"Restaurant, Caribbean, Catering, Juice Bar",https://www.silversdelight.com/,Atlanta
+83,Sublime Donuts,"2566 Briarcliff Road Northeast, GA 30329",GA 30329,"Restaurant, Bakery, Fast Food",https://www.sublimedoughnuts.com/,Atlanta
+84,Pit Boss Bbq,"856 Virginia Avenue, GA 30354",GA 30354,"Restaurant, Bbq",https://pitboss-bbq.com/,Atlanta
+85,Gordon Branding Group,"3333 Piedmont Road NE 2050, GA 30305",GA 30305,Marketing & PR,https://www.gordonbrandinggroup.com/,Atlanta
+86,Turning Point Leadership Group LLC,"3340 Peachtree Rd, Suite 1800 None, GA 30326",GA 30326,Business Services,https://www.turningpointlg.com/,Atlanta
+87,Diaspora Kitchen,"3523 Memorial Drive, GA 30032",GA 30032,"Restaurant, Soul Food",https://www.diaspora-kitchenatl.com/,Atlanta
+88,Alpha Healthcare Group,"100 Hartsfield Center Parkway Ste 500, GA 30354",GA 30354,Financial Services,https://www.upgrademypolicy.com/ccga3,Atlanta
+89,Quality Personal Care,"3399 Peachtree Rd, NE 400, GA 30326",GA 30326,"Personal Care, Grooming",https://www.qpcare.com/,Atlanta
+90,Twenty Twenty Visionary,"3365 Piedmont Rd #1400, GA 30339",GA 30339,Business Services,https://twentytwentyvisionary.com/,Atlanta
+91,"20/20 Visionary Entertainment, LLC","3365 Piedmont Road Suite 1400, GA 30305",GA 30305,Marketing & PR,https://twentytwentyvisionary.com/,Atlanta
+92,"3T Consulting Group, LLC","3379 Peachtree Road NE Suite 550, GA 30326",GA 30326,Misc. Professional Services,https://3teeco.com/,Atlanta
+93,Citizens Trust Bank,"3705 Cascade Rd, GA 30331",GA 30331,Bank,https://ctbconnect.com/,Atlanta
+94,The Scoop on Health & Wealth,"3455 Peachtree Road Suite 1000, GA 30308",GA 30308,Entertainment & Media,https://www.thescoophw.com/,Atlanta
+95,Solutionary Consulting,"Three Alliance Center, 3550 Lenox Road NE Suite 1100, GA 30326",GA 30326,Business Services,https://capstonefinancialga.com/,Atlanta
+96,Hattie Marie's,"3699 Main Street, GA 30337",GA 30337,"Restaurant, Bbq",https://www.hattiemariesbarbecue.com/,Atlanta
+97,Ray's Southern Foods,"4150 Jonesboro Road, GA 30297",GA 30297,"Restaurant, Soul Food, Catering",https://www.rayssouthernfoods.com/,Atlanta
+98,The Real Milk & Honey,"3719 Main Street, GA 30337",GA 30337,"Restaurant, Soul Food, Bar",https://www.therealmilkandhoney.com/,Atlanta
+99,Virgil’s Gullah Kitchen,"3721 Main Street, GA 30337",GA 30337,"Restaurant, Soul Food",https://virgilsgullahkitchen.com/,Atlanta
+100,"Veterans Psychological Group, Inc","3915 Cascade Rd None, GA 30331",GA 30331,Business Services,https://veteranspg.com/,Atlanta
+101,Legacy Pointe Telecommunications,"3915 Cascade Rd None, GA 30331",GA 30331,Technology,https://www.legacypointetelecommunications.com/,Atlanta
+102,Nouveau Bar & Grill,"3775 Main Street, GA 30337",GA 30337,"Restaurant, Bar",https://nouveaubar.com/,Atlanta
+103,"Tom, Dick & Hank","3807 Main Street, GA 30337",GA 30337,"Restaurant, Bbq",https://tomdickandhank.com/,Atlanta
+104,Tastebuddz Atl,"1749 Columbia Drive, GA 30032",GA 30032,"Restaurant, Caribbean",,Atlanta
+105,Supreme Burger,"1827 Columbia Drive, GA 30032",GA 30032,"Restaurant, Fast Food",,Atlanta
+106,AI era Benefits,"5800 Oakdale Rd SE None, GA 30126",GA 30126,Healthcare,https://emedhealthadviser.com/,Atlanta
+107,Alpha Business Images,"4279 Roswell Road NE Suite 102, GA 30342",GA 30342,Marketing & PR,https://www.alphabusinessimages.com/,Atlanta
+108,SERVPRO of Panthersville,"4153 Flat Shoals Pkwy Bldg B Ste 202, GA 30034",GA 30034,Business Services,https://www.servpropanthersville.com/,Atlanta
+109,Bausy Books Consulting,"285 W Wieuca Rd NE 4138, GA 30342",GA 30342,Misc. Professional Services,https://www.bausybooks.com/,Atlanta
+110,State Farm - The Shelby Green Agency,"91 W Wieuca Rd NE None, GA 30342",GA 30342,Business Services,https://none/,Atlanta
+111,Underground App,"4530 West Village Ct None, GA 30080",GA 30080,Entertainment & Media,https://www.undergroundapp.com/,Atlanta
+112,Old Lady Gang,"3650 Marketplace Boulevard, GA 30344",GA 30344,"Restaurant, Soul Food",https://oldladygang.com/,Atlanta
+113,"Edge of the Frame, LLC","5812 Tree Fern Ct SE None, GA 30126",GA 30126,Entertainment & Media,https://www.edgeoftheframellc.com/,Atlanta
+114,RH WARE LLC,"3645 Marketplace Blvd Ste 130-512, GA 30344",GA 30344,Financial Services,https://none/,Atlanta
+115,The Graphics House,"2451 Cumberland Pkwy Suite 3952, GA 30339",GA 30339,Business Services,https://thegraphicshouse.biz/,Atlanta
+116,UpStaff Solutions,"2566 Shallowford Rd NE,104-PMB 257 None, GA 30345",GA 30345,Business Services,https://www.upstaffsolutions.com/,Atlanta
+117,Atlanta Business Technologies,"3350 Riverwood Parkway Ste. 1900, GA 30339",GA 30339,Technology,https://www.atlbustech.com/,Atlanta
+118,Riverside EpiCenter,"135 Riverside Parkway None, GA 30168",GA 30168,Entertainment & Media,https://www.riversideepicenter.com/,Atlanta
+119,Digital Reveries Media,"2997 Cobb Parkway SE Unit 725311, GA 31139",GA 31139,Entertainment & Media,https://www.digitalrevmedia.com/,Atlanta
+120,Brooklyn Chop House,"150 Nassau Street, NY 10038",NY 10038,"Restaurant, Seafood, Dining",https://www.brooklynchophouse.com/,New York
+121,Cheeky Sandwiches,"35 Orchard Street, NY 10002",NY 10002,"Restaurant, Fast Food",https://www.cheekysandwiches.com/,New York
+122,Scarr's Pizza,"22 Orchard Street, NY 10002",NY 10002,"Restaurant, Fast Food",https://www.scarrspizza.com/,New York
+123,Las' Lap,"74 Orchard Street, NY 10002",NY 10002,"Restaurant, Caribbean, Bar",https://www.laslapnewyork.com/,New York
+124,Whipped Urban Dessert Lab,"95 Orchard Street, NY 10002",NY 10002,"Grocery, Retail",https://urbandessertlab/,New York
+125,Sweet Chick,"178 Ludlow Street, NY 10002",NY 10002,"Soul Food, Fast Casual, Restaurant",https://www.sweetchick.com/,New York
+126,Berber Street Food,"35 Carmine Street, NY 10014",NY 10014,"Restaurant, Ethnic, Catering, Cafe",https://berberstreetfood.com/,New York
+127,Omar's Kitchen And Rum Bar,"29a Clinton Street, NY 10002",NY 10002,"Restaurant, Caribbean",https://www.omarskitchennyc.com/,New York
+128,Mikey Likes It Ice Cream,"199 Avenue A, NY 10009",NY 10009,"Restaurant, Fast Food, Family Style Restaurant",https://mikeylikesiticecream.com/,New York
+129,Haile,"182 Avenue B, NY 10009",NY 10009,"Restaurant, Ethiopian",https://hailecuisine.com/,New York
+130,Teranga,"445 Albee Square West, NY 11201",NY 11201,"Restaurant, Ethnic, African",https://itsteranga.com/,New York
+131,The Soul Spot,"302 Atlantic Avenue, NY 11201",NY 11201,"Restaurant, Soul Food, Caribbean",https://soulspotrestaurant.com/,New York
+132,Grandchamps,"141 Flushing Avenue, NY 11205",NY 11205,"Restaurant, Caribbean",https://www.grandchamps.nyc/,New York
+133,Food Sermon Kitchen,"141 Flushing Avenue, NY 11205",NY 11205,"Restaurant, Caribbean",https://www.thefoodsermon.com/,New York
+134,Bk Lobster,"340 Bedford Avenue, NY 11249",NY 11249,"Restaurant, Seafood, Fast Casual",https://bklobster.com/,New York
+135,Peaches Hothouse Fort Greene,"87 South Elliott Place, NY 11217",NY 11217,"Restaurant, Soul Food, Seafood",https://www.bcrestaurantgroup.com/,New York
+136,Eat Real Halal,"1185 Broadway, NY 10001",NY 10001,"Ethnic, Restaurant",,New York
+137,Bati Kitchen,"747 Fulton Street, NY 11217",NY 11217,"Restaurant, Ethiopian",https://www.batikitchen.com/,New York
+138,Imani Kitchen + Bar,"271 Adelphi Street, NY 11205",NY 11205,"Restaurant, Caribbean",https://www.imaninyc.com/,New York
+139,Heritage Wines,"237 Dekalb Avenue, NY 11205",NY 11205,"Grocery, Wine & Spirits",https://heritagewinesnyc.com/,New York
+140,Wray’s Caribbean And Seafood Cuisine,"503 Myrtle Avenue, NY 11205",NY 11205,"Restaurant, Caribbean, Seafood",https://wraysrestaurant.com/,New York
+141,The Armory,"67 4th Avenue, NY 11217",NY 11217,"Restaurant, Bar",,New York
+142,Sweet Chick,"164 Bedford Avenue, NY 11249",NY 11249,"Soul Food, Fast Casual, Restaurant",https://www.sweetchick.com/,New York
+143,Bk9,"62 5th Avenue, NY 11217",NY 11217,"Restaurant, Caribbean, Soul Food, Seafood",https://www.bk9.nyc/,New York
+144,Bk Lobster,"572 Myrtle Avenue, NY 11205",NY 11205,"Restaurant, Seafood, Fast Casual",https://bklobster.com/,New York
+145,"$NP Designs, LLC","1 Pennsylvania Plaza Ste 6338, NY 10119",NY 10119,Arts,https://www.delasnp.com/,New York
+146,Chance 11 Bar And Grill,"895 Fulton Street, NY 11238",NY 11238,"Restaurant, Bar",https://chance11.com/,New York
+147,Peaches Shrimp & Crab,"285 Grand Avenue, NY 11238",NY 11238,"Restaurant, Soul Food, Seafood",https://www.bcrestaurantgroup.com/,New York
+148,Mac Shack,"901 Fulton Street, NY 11238",NY 11238,"Restaurant, Fast Food",https://www.macshackny.com/,New York
+149,Rustik Tavern,"471 Dekalb Avenue, NY 11205",NY 11205,"Restaurant, Bar",https://rustiktavern.com/,New York
+150,Sisters,"900 Fulton Street, NY 11238",NY 11238,"Restaurant, Bar, Cafe",https://www.sistersbklyn.com/,New York
+151,333 Lounge,"333 Flatbush Avenue, NY 11217",NY 11217,"Restaurant, Caribbean, Bar, Lounge",https://www.333lounge.com/,New York
+152,Le Succulent,"291 5th Avenue, NY 11215",NY 11215,"Restaurant, Ethnic, African",https://lesucculent.com/,New York
+153,Taylor Made Jamaican Eatery,"393 Classon Avenue, NY 11238",NY 11238,"Restaurant, Caribbean",https://www.taylormadejamaicaneatery.com/,New York
+154,Sweet Chick,"341 Flatbush Avenue, NY 11217",NY 11217,"Soul Food, Fast Casual, Restaurant",https://www.sweetchick.com/,New York
+155,Bierwax,"556 Vanderbilt Avenue, NY 11238",NY 11238,"Restaurant, Bar",https://www.bierwaxnyc.com/,New York
+156,Bed-stuy Fish Fry,"940 Fulton Street, NY 11238",NY 11238,"Restaurant, Soul Food, Seafood",https://bedstuyfishfry.com/,New York
+157,Buka,"946 Fulton Street, NY 11238",NY 11238,"Restaurant, Nigerian",https://www.bukanewyork.com/,New York
+158,Golden Krust,"105 East 42nd Street, NY 10017",NY 10017,"Caribbean, Restaurant",https://www.goldenkrust.com/,New York
+159,Greenheart Consulting Partners LLC,"51 Putnam Ave , NY 11238",NY 11238,Misc. Professional Services,https://www.greenheartllc.com/,New York
+160,Ode To Babel,"772 Dean Street, NY 11238",NY 11238,"Restaurant, Bar, Lounge",https://www.odetobabel.com/,New York
+161,Shipwreck Seafood Boutique,"1047 Bedford Avenue, NY 11216",NY 11216,"Restaurant, Seafood",https://shipwreckseafoodbrooklyn.business.site/,New York
+162,Ba'sik Brooklyn,"323 Graham Avenue, NY 11211",NY 11211,"Bar, Restaurant",https://www.basikbrooklyn.com/,New York
+163,Divine Flavored Nigerian Food Truck,"828 2nd Avenue, NY 10017",NY 10017,"Restaurant, Catering, African, Nigerian",https://divineflavoredcatering.com/,New York
+164,Nûrish,"637 Washington Avenue, NY 11238",NY 11238,"Restaurant, Vegan, Healthy Food, Cafe",https://www.nurishbk.com/,New York
+165,Divine Flavored Catering,"992 Atlantic Avenue, NY 11238",NY 11238,"Restaurant, Catering, African, Nigerian",https://divineflavoredcatering.com/,New York
+166,Natural Blend Cafe,"302 Nostrand Avenue, NY 11216",NY 11216,"Bakery, Juice Bar, Restaurant, Vegan, Healthy Food",https://naturalblendcafe.com/,New York
+167,Sit & Wonder,"688 Washington Avenue, NY 11238",NY 11238,"Restaurant, Coffee Shop, Cafe",https://sitandwonder.net/index.html,New York
+168,The Mixtape Shop Cafe,"1129 Bedford Avenue, NY 11216",NY 11216,"Restaurant, Cafe, Music, Casual",https://themixtapeshop.com/,New York
+169,Joloff Restaurant,"1168 Bedford Avenue, NY 11216",NY 11216,"Restaurant, Ethnic, Catering, African",https://www.joloffjoloff.com/,New York
+170,Cheryl's Global Soul,"236 Underhill Avenue, NY 11238",NY 11238,"Restaurant, Catering, Casual",https://www.cherylsglobalsoul.com/,New York
+171,Sally's Bar & Restaurant,"151 Tompkins Avenue, NY 11206",NY 11206,"Restaurant, Caribbean, Bar",https://www.sallysbk.com/,New York
+172,Bklyn Blend,"194 Tompkins Avenue, NY 11216",NY 11216,"Restaurant, Healthy Food, Juice Bar",https://www.bklynblend.com/,New York
+173,Coffee Spot,"679 Classon Avenue, NY 11238",NY 11238,"Restaurant, Bakery, Coffee Shop",https://coffeespotbk.square.site/,New York
+174,Natural Blend Cafe,"769 Washington Avenue, NY 11238",NY 11238,"Bakery, Juice Bar, Restaurant, Vegan, Healthy Food",https://naturalblendcafe.com/,New York
+175,Sweet Chick,"46-42 Vernon Boulevard, NY 11101",NY 11101,"Soul Food, Fast Casual, Restaurant",https://www.sweetchick.com/,New York
+176,Liquid Assets,"504 Nostrand Avenue, NY 11216",NY 11216,"Grocery, Wine & Spirits",https://liquidassetsbk.com/,New York
+177,Brooklyn Baby Cakes,"506 Nostrand Avenue, NY 11216",NY 11216,"Restaurant, Bakery",https://brooklynbabycakes.com/,New York
+178,Doctor's Cave Cafe,"856 Marcy Avenue, NY 11216",NY 11216,"Restaurant, Healthy Food, Juice Bar, Cafe",https://doctorscavecafe.com/,New York
+179,The Bush Doctor Juice Bar,"307 Tompkins Avenue, NY 11216",NY 11216,"Restaurant, Juice Bar, Healthy Food",https://www.thebushdoctor.net/,New York
+180,Brooklyn Tea,"524 Nostrand Avenue, NY 11216",NY 11216,"Restaurant, Coffee Shop",https://brooklyntea.com/,New York
+181,Communitea,"11-18 46th Road, NY 11101",NY 11101,"Healthy Food, Coffee Shop, Restaurant",https://www.communitea.net/,New York
+182,Brooklyn Suya,"717 Franklin Avenue, NY 11238",NY 11238,"Ethnic, Nigerian, Restaurant, Healthy Food, Fast Casual",https://www.brooklynsuya.com/,New York
+183,Drip Coffee Makers,"12 Belvidere Street, NY 11206",NY 11206,"Restaurant, Coffee Shop",https://www.dripcoffeenyc.com/,New York
+184,Bk Lobster,"535 Nostrand Avenue, NY 11216",NY 11216,"Restaurant, Seafood, Fast Casual",https://bklobster.com/,New York
+185,Bed Vyne Wine,"385 Tompkins Avenue, NY 11216",NY 11216,"Grocery, Wine & Spirits",https://wine.bed-vyne.com/,New York
+186,Brooklyn Kettle,"385 Tompkins Avenue, NY 11216",NY 11216,"Restaurant, Bakery, Coffee Shop",https://www.brooklynkettle.com/,New York
+187,Black Nile,"592 Nostrand Avenue, NY 11216",NY 11216,"Restaurant, Soul Food, Seafood",https://blacknilerestaurant.com/,New York
+188,95 South Soul Food Restaurant,"778 Franklin Avenue, NY 11238",NY 11238,"Restaurant, Soul Food",https://sites.google.com/view/95southsoulfood/home,New York
+189,Brown Butter Craft Bar & Kitchen,"413 Tompkins Avenue, NY 11216",NY 11216,"Restaurant, Bakery, Coffee Shop, Casual",https://brownbutternyc.com/,New York
+190,Peaches Hothouse Bed Stuy,"415 Tompkins Avenue, NY 11216",NY 11216,"Restaurant, Soul Food, Seafood",https://www.bcrestaurantgroup.com/,New York
+191,Cafe Rue Dix,"1451 Bedford Avenue, NY 11216",NY 11216,"Restaurant, Ethnic, Cafe",https://www.caferuedix.com/,New York
+192,Bleu Fin Bar & Grill,"637 Nostrand Avenue, NY 11216",NY 11216,"Restaurant, Caribbean, Seafood, Bar",https://www.bleu-fin.com/,New York
+193,Spudz,"1460 Fulton Street, NY 11216",NY 11216,"Restaurant, Fast Food",https://spudznyc.com/,New York
+194,Cafe Moca,"108 Central Avenue, NY 11206",NY 11206,"Healthy Food, Cafe, Coffee Shop, Restaurant",https://www.cafemoca.nyc/,New York
+195,Bunna Cafe,"1084 Flushing Avenue, NY 11237",NY 11237,"Restaurant, Ethiopian",https://bunnaethiopia.net/,New York
+196,Zaca Cafe,"426 Marcus Garvey Boulevard, NY 11216",NY 11216,"Restaurant, Cafe, Casual",https://zacacafe.com/,New York
+197,Brooklyn Wing House,"1218 Union Street, NY 11225",NY 11225,"Fast Food, Restaurant",,New York
+198,The Bergen,"1299 Bergen Street, NY 11213",NY 11213,"Restaurant, Fast Food",https://www.thebergenbk.com/,New York
+199,Secret Garden Juice Bar And Tea House,"347 Lewis Avenue, NY 11233",NY 11233,"Restaurant, Vegan, Juice Bar, Healthy Food",https://secretgardengypsy.company.site/,New York
+200,Bed-stuy Fish Fry,"827 Nostrand Avenue, NY 11225",NY 11225,"Restaurant, Soul Food, Seafood",https://bedstuyfishfry.com/,New York
+201,Brooklyn Beso,"370 Lewis Avenue, NY 11233",NY 11233,"Restaurant, Caribbean",https://brooklynbeso.com/,New York
+202,Peaches Kitchen & Bar,"393 Lewis Avenue, NY 11233",NY 11233,"Restaurant, Soul Food, Seafood, Bar",https://www.bcrestaurantgroup.com/,New York
+203,Sol Sips,"276 Knickerbocker Avenue, NY 11237",NY 11237,"Restaurant, Soul Food, Catering, Healthy Food",https://www.solsipsnyc.com/,New York
+204,Field Trip,"28 Jackson Avenue, NY 11101",NY 11101,"Restaurant, Ethnic, Catering, Fast Casual",https://www.fieldtripnyc.com/,New York
+205,Black Bourgeois,"81 Bainbridge Street, NY 11233",NY 11233,Retail,https://www.blackbourgeois.com/,New York
+206,"Akwaaba Mansion Brooklyn, NY","347 MacDonough St., NY 11233",NY 11233,Hotel,https://www.akwaaba.com/akwaaba-mansion/,New York
+207,Essence Restaurant And Bar,"1662 Atlantic Avenue, NY 11213",NY 11213,"Restaurant, Soul Food, Bar",https://www.essencebar.com/,New York
+208,Honey Badger,"67 Fenimore Street, NY 11225",NY 11225,"Restaurant, Dining",https://www.honeybadgerbk.com/,New York
+209,Natural Blend Cafe,"243 Malcolm X Boulevard, NY 11233",NY 11233,"Bakery, Juice Bar, Restaurant, Vegan, Healthy Food",https://naturalblendcafe.com/,New York
+210,& Sons,"447 Rogers Avenue, NY 11225",NY 11225,"Restaurant, Dining",https://andsonsnyc.com/,New York
+211,Creme and Cocoa Creamery,"1067 Nostrand Ave., NY 11225",NY 11225,Restaurant,https://cremeandcocoa.com/,New York
+212,Plg Coffee House And Tavern,"499 Rogers Avenue, NY 11225",NY 11225,"Restaurant, Bakery, Coffee Shop, Cafe",https://plgcoffeehousetavern.com/,New York
+213,Milk And Pull,"181 Irving Avenue, NY 11237",NY 11237,"Restaurant, Coffee Shop",https://milkandpull.square.site/,New York
+214,Milk And Pull,"307 Malcolm X Boulevard, NY 11233",NY 11233,"Restaurant, Coffee Shop",https://milkandpull.square.site/,New York
+215,Grandchamps,"197 Patchen Avenue, NY 11233",NY 11233,"Restaurant, Caribbean",https://www.grandchamps.nyc/,New York
+216,Allan's Bakery,"1109 Nostrand Avenue, NY 11225",NY 11225,"Restaurant, Bakery",https://www.allansbakery.com/,New York
+217,Cafe On Ralph,"86 Ralph Avenue, NY 11221",NY 11221,"Restaurant, Cafe, Coffee Shop, Casual",https://cafeonralphavenue.com/,New York
+218,Katie O's Soul Food,"452 East New York Avenue, NY 11225",NY 11225,"Restaurant, Soul Food",https://www.katieossoulfood.com/,New York
+219,Mangoseed + Zurilee,"755 Flatbush Avenue, NY 11226",NY 11226,"Restaurant, Caribbean",https://www.mangoseedbrooklyn.com/,New York
+220,Sally Roots,"195 Wyckoff Avenue, NY 11237",NY 11237,"Restaurant, Caribbean, Bar, Bbq",https://www.sallyroots.com/,New York
+221,Zanmi,"1206 Nostrand Avenue, NY 11225",NY 11225,"Restaurant, Caribbean",https://www.zanminyc.com/,New York
+222,Sophia & Grace Cookie Co.,"163 Ralph Avenue, NY 11233",NY 11233,"Restaurant, Vegan, Bakery",,New York
+223,Greedi Vegan Kitchen,"180 Ralph Avenue, NY 11233",NY 11233,"Restaurant, Vegan",https://greedi-kitchen.com/,New York
+224,Bed-stuy Fish Fry,"801 Halsey Street, NY 11233",NY 11233,"Restaurant, Soul Food, Seafood",https://bedstuyfishfry.com/,New York
+225,Cuts And Slices,"93 Howard Avenue, NY 11233",NY 11233,"Restaurant, Fast Food",https://www.cutsslices.com/,New York
+226,Happy Cork,"51 Buffalo Avenue, NY 11233",NY 11233,"Grocery, Wine & Spirits",https://happy-cork.com/,New York
+227,Cafe Moca,"487 Seneca Avenue, NY 11385",NY 11385,"Healthy Food, Cafe, Coffee Shop, Restaurant",https://www.cafemoca.nyc/,New York
+228,Natural Blend Cafe,"2251 Church Avenue, NY 11226",NY 11226,"Bakery, Juice Bar, Restaurant, Vegan, Healthy Food",https://naturalblendcafe.com/,New York
+229,Lips Cafe,"1412 Nostrand Avenue, NY 11226",NY 11226,"Restaurant, Caribbean, Coffee Shop, Cafe",,New York
+230,Snowdonia,"32-1 35th Avenue, NY 11106",NY 11106,"Pub, Bar, Restaurant",https://snowdonia.nyc/,New York
+231,Milk And Pull,"778 Seneca Avenue, NY 11385",NY 11385,"Restaurant, Coffee Shop",https://milkandpull.square.site/,New York
+232,Rochdale Chicken And Fish,"1060 Rutland Road, NY 11212",NY 11212,"Soul Food, Seafood, Restaurant",https://www.rochdalechickenandfish.com/,New York
+233,Sek'end Sun,"32-11 Broadway, NY 11106",NY 11106,"Bar, Restaurant",https://www.sekendsun.com/,New York
+234,King's Juice Bar,"955 Seneca Avenue, NY 11385",NY 11385,"Healthy Food, Juice Bar, Restaurant",https://www.kingsjuicebar.com/,New York
+235,GARDEN OF KNOWLEDGE DAY CARE & LEARNING CENTER,"1657 Nostrand Avenue, NY 11226",NY 11226,Education,https://www.gokdaycare.com/,New York
+236,Sip Unwine,"1197 Flatbush Avenue, NY 11226",NY 11226,"Restaurant, Caribbean, Bar",https://www.sipunwine.com/,New York
+237,Cream Ridgewood,"59-09 71st Avenue, NY 11385",NY 11385,"Bar, Casual, Restaurant",https://www.creamridgewood.com/,New York
+238,Makina Cafe,"26-30 30th Street, NY 11102",NY 11102,"Ethiopian, Eritrean, Restaurant",https://makinacafenyc.com/,New York
+239,Collective Fare,"69 Belmont Avenue, NY 11212",NY 11212,"Restaurant, Catering",https://www.collectivefare.com/,New York
+240,Lloyd's Carrot Cake,"1553 Lexington Avenue, NY 10029",NY 10029,"Restaurant, Bakery",https://www.lloydscarrotcake.com/,New York
+241,Macoletta,"28-15 24th Avenue, NY 11102",NY 11102,"Casual, Restaurant",https://www.macoletta.com/,New York
+242,Staten Island Fish And More,"137 Montgomery Avenue, NY 10301",NY 10301,"Restaurant, Soul Food, Caribbean",,New York
+243,Chez Adja African Restaurant,"226 Bay Street, NY 10301",NY 10301,"Restaurant, African, Nigerian",,New York
+244,Teranga,"1280 5th Avenue, NY 10029",NY 10029,"Restaurant, Ethnic, African",https://itsteranga.com/,New York
+245,City National Bank of New Jersey,"2815 Atlantic Ave, NY 11207",NY 11207,Bank,https://www.citynatbank.com/,New York
+246,Miss Mamie's Spoonbread Too,"366 West 110th Street, NY 10025",NY 10025,"Restaurant, Soul Food, Catering",https://spoonbreadinc.com/,New York
+247,ZYEM LLC,"PO Box 100233, NY 11210",NY 11210,Retail,https://www.zyem.com/,New York
+248,"Lean off Taxes, LLC","2361 Nostrand Ave, NY 11210",NY 11210,Financial Services,https://www.leanofftaxes.com/,New York
+249,Seasoned Vegan,"55 Saint Nicholas Avenue, NY 10026",NY 10026,"Restaurant, Soul Food, Vegan",https://www.seasonedvegan.com/,New York
+250,67 Orange Street,"2082 Frederick Douglass Boulevard, NY 10026",NY 10026,"Restaurant, Bar",https://www.67orangestreet.com/,New York
+251,Bklyn Blend,"601 Livonia Avenue, NY 11207",NY 11207,"Restaurant, Healthy Food, Juice Bar",https://www.bklynblend.com/,New York
+252,Zoma,"2084 Frederick Douglass Boulevard, NY 10026",NY 10026,"Restaurant, Ethiopian",,New York
+253,Mr. Cangrejo,"79-09 Roosevelt Avenue, NY 11372",NY 11372,"Ethnic, Seafood, Restaurant",https://www.mistercangrejo.com/,New York
+254,Melba's,"300 West 114th Street, NY 10026",NY 10026,"Restaurant, Soul Food, Catering, Casual",https://www.melbasrestaurant.com/,New York
+255,Field Trip,"109 Malcolm X Boulevard, NY 10026",NY 10026,"Restaurant, Ethnic, Catering, Fast Casual",https://www.fieldtripnyc.com/,New York
+256,Blvd Bistro,"2149 Frederick Douglass Boulevard, NY 10026",NY 10026,"Restaurant, Soul Food, Bar",https://www.boulevardbistrony.com/,New York
+257,Safari,"219 West 116th Street, NY 10026",NY 10026,"Restaurant, Ethnic, African",https://safariharlem.com/,New York
+258,Lolo's Seafood Shack,"303 West 116th Street, NY 10026",NY 10026,"Restaurant, Caribbean, Catering, Seafood",https://lolosseafoodshack.com/,New York
+259,Lee Lee's Baked Goods,"283 West 118th Street, NY 10026",NY 10026,"Restaurant, Bakery",https://www.leeleesrugelach.com/,New York
+260,Bed-stuy Fish Fry,"1716 Utica Avenue, NY 11234",NY 11234,"Restaurant, Soul Food, Seafood",https://bedstuyfishfry.com/,New York
+261,B² Harlem,"271 West 119th Street, NY 10026",NY 10026,"Restaurant, Seafood, Bar",https://www.b2harlem.com/,New York
+262,Vinateria,"2211 Frederick Douglass Boulevard, NY 10026",NY 10026,"Restaurant, Dining",https://www.vinaterianyc.com/,New York
+263,Chocolat Restaurant Lounge,"2223 Frederick Douglass Boulevard, NY 10026",NY 10026,"Restaurant, Soul Food, Bar, Casual",https://www.chocolatharlem.com/,New York
+264,Massawa,"1239 Amsterdam Avenue, NY 10027",NY 10027,"Eritrean, Ethiopian, Seafood, Restaurant, African",https://www.massawanyc.com/,New York
+265,Harlem Shake,"100 West 124th Street, NY 10027",NY 10027,"Restaurant, Fast Food",https://www.harlemshakenyc.com/,New York
+266,Sisters Cuisine,"47 East 124th Street, NY 10035",NY 10035,"Restaurant, Caribbean, Soul Food",https://www.sisterscuisineharlem.com/,New York
+267,Uptown Veg,"52 East 125th Street, NY 10035",NY 10035,"Restaurant, Bakery, Vegan, Juice Bar",https://uptownvegnyc.com/,New York
+268,City National Bank of New Jersey,"382 West 125th St, NY 10027",NY 10027,Bank,https://www.citynatbank.com/,New York
+269,Cove Lounge,"325 Malcolm X Boulevard, NY 10027",NY 10027,"Restaurant, Bar, Lounge",https://www.covelounge.com/,New York
+270,Sylvia's,"328 Malcolm X Boulevard, NY 10027",NY 10027,"Restaurant, Soul Food",https://sylviasrestaurant.com/,New York
+271,Http://www.bayounyc.com/,"1072 Bay Street, NY 10305",NY 10305,"Restaurant, Dining",https://www.bayounyc.com/,New York
+272,Maison Harlem,"341 Saint Nicholas Avenue, NY 10027",NY 10027,"Restaurant, Catering, Seafood, Dining",https://www.maisonharlem.com/,New York
+273,Lighthouse Fish Market,"2451 Frederick Douglass Boulevard, NY 10027",NY 10027,"Restaurant, Soul Food, Seafood",https://lighthousefishmarket.com/,New York
+274,Neirs Tavern,"87-48 78th Street, NY 11421",NY 11421,"Bar, Restaurant",https://neirstavern.com/,New York
+275,Renaissance Harlem,"2245 Adam Clayton Powell Junior Boulevard, NY 10027",NY 10027,"Restaurant, Catering, Dining",https://renaissance-harlem.com/,New York
+276,Charles' Country Pan Fried Chicken,"2461 Frederick Douglass Boulevard, NY 10027",NY 10027,"Restaurant, Soul Food",,New York
+277,Bricks And Hops,"65 Bruckner Boulevard, NY 10454",NY 10454,"Restaurant, Casual",https://www.bricksandhops.com/,New York
+278,Beatstro,"135 Alexander Avenue, NY 10454",NY 10454,"Restaurant, Soul Food, Casual",https://www.beatstro.com/,New York
+279,Yatenga French Bistro,"2269 Adam Clayton Powell Junior Boulevard, NY 10030",NY 10030,"Restaurant, Bar",https://www.yatengabistro.com/,New York
+280,Harlem Hops,"2268 Adam Clayton Powell Junior Boulevard, NY 10030",NY 10030,"Restaurant, Bar",https://harlemhops.com/,New York
+281,Honey Bee's Kitchen,"9322 Avenue L, NY 11236",NY 11236,"Restaurant, Ethnic, African, Nigerian",,New York
+282,Mikey Likes It Ice Cream,"2500 Frederick Douglass Boulevard, NY 10030",NY 10030,"Restaurant, Fast Food, Family Style Restaurant",https://mikeylikesiticecream.com/,New York
+283,Cafe Grill,"26-02 96th Street, NY 11369",NY 11369,"Cafe, Seafood, Fast Casual, Restaurant",https://cafegrillinc.com/,New York
+284,Home Sweet Harlem,"1528 Amsterdam Avenue, NY 10031",NY 10031,"Restaurant, Catering, Casual",https://homesweetharlem.nyc/,New York
+285,Ruby's Vintage,"2340 Adam Clayton Powell Junior Boulevard, NY 10030",NY 10030,"Restaurant, Casual",https://www.rubysvintageharlem.com/,New York
+286,Modern Urban Sensory Experiences (MUSE),"66 EDGECOMBE AVENUE, NY 10030",NY 10030,Retail,https://museexperiences.com/,New York
+287,Belle Harlem,"2363 Adam Clayton Powell Junior Boulevard, NY 10030",NY 10030,"Restaurant, Dining",https://www.belleharlem.com/,New York
+288,Reverence,"2592 Frederick Douglass Boulevard, NY 10030",NY 10030,"Restaurant, Dining",https://reverence.nyc/,New York
+289,Build the Blocking Consulting,"70 W 139th St, NY 10037",NY 10037,Misc. Professional Services,https://buildtheblock.io/,New York
+290,Ponty Bistro,"2375 Adam Clayton Powell Junior Boulevard, NY 10030",NY 10030,"Restaurant, Seafood",https://www.pontybistroharlemny.com/,New York
+291,The Edge Harlem,"101 Edgecombe Avenue, NY 10030",NY 10030,"Restaurant, Casual",https://www.theedgeharlem.com/,New York
+292,Jamaica Breeze,"103-02 Astoria Boulevard, NY 11369",NY 11369,"Restaurant, Caribbean, Bakery, Catering",https://jamaicabreezenyc.com/,New York
+293,The Wine Room Of Forest Hills,"96-9 69th Avenue, NY 11375",NY 11375,"Grocery, Wine & Spirits",,New York
+294,Feva Nation LLC,"124 Adams Street, NJ 07105",NJ 07105,Entertainment & Media,,New York
+295,Sam's Soulfood,"598 Grand Concourse, NY 10451",NY 10451,"Restaurant, Soul Food, Bar",https://www.samssoulfood.com/,New York
+296,Benyam,"2795 Frederick Douglass Boulevard, NY 10039",NY 10039,"Restaurant, Catering, Ethiopian",https://www.benyamcuisine.com/,New York
+297,Tsion Cafe,"763 Saint Nicholas Avenue, NY 10031",NY 10031,"Ethiopian, Ethnic, Bakery, Cafe, Restaurant",https://tsioncafe.com/,New York
+298,Tri Lounge And Cafe,"1938 Clove Road, NY 10304",NY 10304,"Restaurant, Vegan, Healthy Food",https://triloungeandcafe.com/,New York
+299,Heat Caribbean Kitchen & Lounge,"100-05 Atlantic Avenue, NY 11418",NY 11418,"Bar, Caribbean, Restaurant",https://heatcaribbeankitchenandlounge.com/,New York
+300,Juice 101 Nyc,"97-16 101st Avenue, NY 11416",NY 11416,"Healthy Food, Juice Bar, Restaurant",,New York
+301,City National Bank of New Jersey,"900 Broad St, NJ 07102",NJ 07102,Bank,https://www.citynatbank.com/,New York
+302,Mother Earth Juice Bar & Health Foods,"116-03 Metropolitan Avenue, NY 11418",NY 11418,"Healthy Food, Juice Bar, Restaurant",https://motherearthjuice.com/,New York
+303,Queens Bully,"113-30 Queens Boulevard, NY 11375",NY 11375,"Restaurant, Bbq",https://www.queensbully.com/,New York
+304,Quality Auto Mall,"55 Route 17 N., NJ 07070",NJ 07070,Car Dealership,https://www.qualityautomall.com/,New York
+305,Flavas International Grill,"853 Gerard Avenue, NY 10451",NY 10451,"Restaurant, Caribbean",https://www.eatflavasbx.com/,New York
+306,Koten's Caribbean And American Restaurant,"537 Port Richmond Avenue, NY 10302",NY 10302,"Restaurant, Caribbean, Soul Food",,New York
+307,Bical Auto Mall,"2859 Flatbush Ave, NY 11234",NY 11234,Car Dealership,https://www.bicalautomall.com/,New York
+308,Hazel Southern Bar & Kitchen,"1446 Market Street, CA 94102",CA 94102,"Restaurant, Bar, Casual",https://www.hazelsf.com/,San Francisco
+309,Voodoo Love,"1710 Mission Street, CA 94103",CA 94103,"Restaurant, Seafood, Casual",https://www.voodoolovesf.com/,San Francisco
+310,Sextant Coffee,"1415 Folsom Street, CA 94103",CA 94103,"Ethiopian, Ethnic, Coffee Shop, Cafe, Restaurant",https://sextantcoffee.com/,San Francisco
+311,Boug Cali,"101 Hyde Street, CA 94102",CA 94102,"Restaurant, Seafood",https://bougcali.com/,San Francisco
+312,Two Jack's Seafood,"401 Haight Street, CA 94117",CA 94117,"Restaurant, Soul Food, Seafood",https://www.twojacksniksplace.com/,San Francisco
+313,Cafe International,"508 Haight Street, CA 94117",CA 94117,"Restaurant, Coffee Shop, Cafe",,San Francisco
+314,Zzoul Cafe,"295 Eddy Street, CA 94102",CA 94102,"Restaurant, Ethnic, African, Cafe",https://zzoulcafe.com/,San Francisco
+315,Tadu Ethiopian Kitchen,"484 Ellis Street, CA 94102",CA 94102,"Restaurant, Ethnic, African, Ethiopian",https://taduethiopiankitchen.com/,San Francisco
+316,Axum Cafe,"698 Haight Street, CA 94117",CA 94117,"Restaurant, African, Ethiopian, Cafe",https://www.axumcafesf.com/,San Francisco
+317,Sheba Piano Lounge,"1419 Fillmore Street, CA 94115",CA 94115,"Restaurant, Bar, Lounge",https://www.shebapianolounge.com/,San Francisco
+318,Flavas Jamaican Grill,"60 Morris Street, CA 94107",CA 94107,"Restaurant, Caribbean, Catering",https://flavasjamaicangrillsf.com/,San Francisco
+319,Oasis Cafe,"901 Divisadero Street, CA 94115",CA 94115,"Restaurant, Eritrean, Ethiopian",https://www.oasiscafesf.com/,San Francisco
+320,Cafe Ethiopia,"878 Valencia Street, CA 94110",CA 94110,"Restaurant, Ethnic, African, Ethiopian",,San Francisco
+321,Nombe,"2491 Mission Street, CA 94110",CA 94110,"Restaurant, Catering",https://www.nombesf.com/,San Francisco
+322,Little Skillet,"360 Ritch Street, CA 94107",CA 94107,"Restaurant, Soul Food, Catering",https://www.littleskilletsf.com/,San Francisco
+323,House Of Tadu,"1120 4th Street, CA 94158",CA 94158,"Restaurant, Ethnic, African, Ethiopian",https://taduethiopiankitchen.com/,San Francisco
+324,The Lumpia Company,"130 Townsend Street, CA 94107",CA 94107,"Restaurant, Ethnic",https://www.thelumpiacompany.com/,San Francisco
+325,Eko Kitchen,"130 Townsend Street, CA 94107",CA 94107,"Restaurant, Catering, Nigerian",https://www.ekokitchensf.online/,San Francisco
+326,El Nuevo Frutilandia,"3077 24th Street, CA 94110",CA 94110,"Restaurant, Caribbean, Ethnic, Music",https://www.frutilandiasf.com/,San Francisco
+327,Local Kitchen,"330 1st Street, CA 94105",CA 94105,"Restaurant, Dining",https://local/,San Francisco
+328,International Smoke,"301 Mission Street, CA 94105",CA 94105,"Restaurant, Dining",https://internationalsmoke.com/,San Francisco
+329,Tunji Food,"351 Fremont Street, CA 94105",CA 94105,Arts,https://tunji.com/,San Francisco
+330,Anthony's Cookies,"1417 Valencia Street, CA 94110",CA 94110,"Restaurant, Bakery",https://www.anthonyscookies.com/,San Francisco
+331,Peaches Patties,"2948 Folsom Street, CA 94110",CA 94110,"Restaurant, Caribbean",https://peachespatties.com/,San Francisco
+332,Teranga,"2948 Folsom Street, CA 94110",CA 94110,"Restaurant, Juice Bar, Healthy Food",https://www.terangajuice.com/,San Francisco
+333,Da' Flora,"701 Columbus Avenue, CA 94133",CA 94133,"Restaurant, Ethnic",https://daflora.com/,San Francisco
+334,Ungrafted,"2419 3rd Street, CA 94107",CA 94107,"Grocery, Wine & Spirits",https://www.ungraftedsf.com/,San Francisco
+335,Sheraton Fishermans Wharf Hotel,"2500 Mason Street, CA 94133",CA 94133,Hotel,https://www.marriott.com/hotels/travel/sfosi-sheraton-fishermans-wharf-hotel/?SWAQ=958P,San Francisco
+336,Bella Trattoria,"3848 Geary Boulevard, CA 94118",CA 94118,"Restaurant, Ethnic, Bar",https://osteriabella.com/,San Francisco
+337,Tastebuds,"600 5th Avenue, CA 94118",CA 94118,"Restaurant, Soul Food",https://www.sftastebuds.com/,San Francisco
+338,Taqueria Los Mayas,"331 Clement Street, CA 94118",CA 94118,"Restaurant, Ethnic, Fast Casual",https://taquerialosmayassf.com/,San Francisco
+339,New Eritrea Restaurant,"907 Irving Street, CA 94122",CA 94122,"Restaurant, Eritrean, Ethnic, African",https://neweritrearestaurant.com/,San Francisco
+340,Big H Bbq,"4101 3rd Street, CA 94124",CA 94124,"Restaurant, Seafood, Bbq",,San Francisco
+341,Camisha's Cakes,"255 Mendell Street, CA 94124",CA 94124,"Restaurant, Bakery",https://www.camishascakes.com/,San Francisco
+342,Auntie April’s Chicken-n-waffles,"4618 3rd Street, CA 94124",CA 94124,"Restaurant, Soul Food",https://www.auntieaprilssf.com/,San Francisco
+343,Tallio’s,"4732 3rd St, CA 94124",CA 94124,Manufacturing,https://www.tallioscoffee.com/,San Francisco
+344,Radio Africa Kitchen,"4800 3rd Street, CA 94124",CA 94124,"Catering, Ethiopian, Ethnic, Restaurant, African",https://www.radioafricakitchen.com/,San Francisco
+345,Yvonne's Southern Sweets,"5128 3rd Street, CA 94124",CA 94124,"Restaurant, Bakery",https://www.yvonnessouthernsweets.com/,San Francisco
+346,Frisco Fried,"5176 3rd Street, CA 94124",CA 94124,"Restaurant, Soul Food, Seafood",https://friscofried.biz/,San Francisco
+347,Excelsior Coffee,"4495 Mission Street, CA 94112",CA 94112,"Restaurant, Coffee Shop, Cafe",https://www.xlcrsf.com/,San Francisco
+348,Cafe Envy,"1701 Yosemite Avenue, CA 94124",CA 94124,"Restaurant, Lounge, Casual",,San Francisco
+349,Sunset Cantina,"3414 Judah Street, CA 94122",CA 94122,"Restaurant, Ethnic, Bar",https://sunsetcantinasf.com/,San Francisco
+350,Red's House,"25 Washington Street, CA 94014",CA 94014,"Restaurant, Caribbean, Ethnic",https://www.eatreds.com/,San Francisco
+351,Keith's Chicken N Waffles,"270 San Pedro Road, CA 94014",CA 94014,"Restaurant, Soul Food, Catering",https://www.keithschickennwaffles.com/,San Francisco
+352,Bikes 4 Life,"707 Peralta St, CA 94607",CA 94607,"Retail, Bike Shop",https://www.bikes4life.com/,San Francisco
+353,Zella’s Soulful Kitchen,"1430 7th St, CA 94607",CA 94607,"Restaurant, Soul Food",https://www.zellassoulfulkitchen.com/,San Francisco
+354,Way to Life Foods,"1364 7th St, CA 94607",CA 94607,Consumer Packaged Goods,https://www.waytolifefoods.com/,San Francisco
+355,Mandela MarketPlace,"1364 7th St, CA 94607",CA 94607,"Market, Grocery",https://www.mandelapartners.org/,San Francisco
+356,B-Love's Guesthouse,"1131 Center St, CA 94607",CA 94607,"Lodging, Bed & Breakfast",https://www.b-lovesguesthouse.com/,San Francisco
+357,7th West Oakland,"1255 7th Street, CA 94607",CA 94607,"Restaurant, Casual",https://www.7thwest.com/,San Francisco
+358,Proper Fashions LLC,"120 Clay Street 120, CA 94612",CA 94612,Retail,https://properfashions.com/,San Francisco
+359,Hilton Garden Inn San Francisco / Oakland Bay Bridge,"1800 Powell St, CA 94608",CA 94608,"Lodging, Hotel",https://hiltongardeninn3.hilton.com/en/hotels/california/hilton-garden-inn-san-francisco-oakland-bay-bridge-SFOBBGI/index.html,San Francisco
+360,Home of Chicken & Waffles,"444 Embarcadero West, CA 94607",CA 94607,"Restaurant, Soul Food",https://www.homeofchickenandwaffles.com/,San Francisco
+361,Home Of Chicken And Waffles,"444 Embarcadero West, CA 94607",CA 94607,"Restaurant, Soul Food",https://www.homeofchickenandwaffles.com/,San Francisco
+362,Everett and Jones,"126 Broadway, CA 94607",CA 94607,"Restaurant, BBQ",https://eandjbbq.com/,San Francisco
+363,Everett And Jones Bbq,"126 Broadway, CA 94607",CA 94607,"Restaurant, Catering, Bbq",https://eandjbbq.com/,San Francisco
+364,Souley Vegan,"301 Broadway, CA 94607",CA 94607,"Restaurant, Soul Food, Vegan, Healthy Food",https://souleyvegan.com/,San Francisco
+365,Brendan Havenar-Daughton,"2847 Peralta St, CA 94608",CA 94608,"Grocery, Farmers Market",https://www.cityslickerfarms.org/index.php,San Francisco
+366,Oeste Bar & Kitchen,"722 Clay St, CA 94607",CA 94607,"Restaurant, Bar, Lounge",https://oesteoakland.com/,San Francisco
+367,Oeste,"722 Clay Street, CA 94607",CA 94607,"Restaurant, Bar, Cafe",https://oesteoakland.com/,San Francisco
+368,African Caribbean Food Market,"547 8th St, CA 94607",CA 94607,Grocery,https://manmustwak.net/,San Francisco
+369,Purple Heart Patient Center,"415 4th St, CA 94607",CA 94607,Cannabis Dispensary,https://www.purpleheartpc.org/,San Francisco
+370,Graffiti Pizza,"719 Washington Street, CA 94607",CA 94607,"Restaurant, Fast Food",,San Francisco
+371,Yammy's Cafe,"542 9th Street, CA 94607",CA 94607,"Restaurant, Ethnic, African, Ethiopian",https://www.yammysethiopiancafe.com/,San Francisco
+372,Super Juiced,"540 9th St, CA 94607",CA 94607,Juice Bar,,San Francisco
+373,Super Juiced Oakland,"540 9th Street, CA 94607",CA 94607,"Restaurant, Vegan, Juice Bar, Healthy Food",https://www.oaklandisjuiced.com/,San Francisco
+374,Fort Green,"736 Washington Street, CA 94607",CA 94607,"Restaurant, Catering, Bar",https://www.fortgreenoakland.com/,San Francisco
+375,NextGen Dentistry,"475 8th St, CA 94607",CA 94607,Healthcare,https://www.oaklandnextgendentistry.com/,San Francisco
+376,Oakland African American Museum & Library,"659 14th St, CA 94612",CA 94612,Museum,https://www.oaklandlibrary.org/locations/african-american-museum-library-oakland,San Francisco
+377,District Oakland,"827 Washington St, CA 94607",CA 94607,"Bar, Lounge",https://districtoak.com/,San Francisco
+378,The Cook And Her Farmer,"510 9th Street, CA 94607",CA 94607,"Restaurant, Seafood, Dining",https://unsplash.com/photos/xxalfz6v9rq,San Francisco
+379,Miss Ollie's,"901 Washington Street, CA 94607",CA 94607,"Restaurant, Caribbean, Catering, Ethnic",https://www.realmissolliesoakland.com/,San Francisco
+380,Miss Ollie's,"936 Clay St, CA 94607",CA 94607,"Restaurant, Caribbean",https://www.realmissolliesoakland.com/,San Francisco
+381,Cupcakin' Bake Shop,"907 Washington Street, CA 94607",CA 94607,"Restaurant, Bakery, Catering",https://cupcakinbakeshop.com/,San Francisco
+382,Enspyre33 LLC,"5684 Bay St 458, CA 94608",CA 94608,Sports,https://ballbyyourself.com/,San Francisco
+383,Owl N Wood,"471 9th St, CA 94607",CA 94607,"Retail, Apparel",https://owlnwood.com/,San Francisco
+384,The Red Door Catering,"2925 Adeline St, CA 94608",CA 94608,Catering,https://www.reddoorcatering.com/,San Francisco
+385,The Red Door Catering,"2925 ADELINE STREET, CA 94608",CA 94608,Restaurant,https://www.trdtogo.com/,San Francisco
+386,Reddoor Catering,"2925 Adeline Street, CA 94608",CA 94608,"Restaurant, Catering",https://reddoorcatering.com/,San Francisco
+387,Uncle Willie's Bbq And Fish,"614 14th Street, CA 94612",CA 94612,"Restaurant, Catering, Seafood, Bbq",https://unclewilliesbbq.com/,San Francisco
+388,Uncle Willie's Original BBQ and Fish,"614 14th St, CA 94612",CA 94612,"Restaurant, BBQ",,San Francisco
+389,Baines Group Inc.,"562 14th St, CA 94612",CA 94612,"Construction, General Contracting",https://bainesgroup.net/,San Francisco
+390,The Dreadlocks Salon,"341 7th St, CA 94607",CA 94607,Salon,https://www.dreadlockssalon.com/,San Francisco
+391,A City Obsession Boutique,"500 12th St, CA 94607",CA 94607,"Retail, Apparel",https://www.acityobsessionboutique.com/,San Francisco
+392,Minnie Bell's Soul Movement,"5959 Shellmound Street, CA 94608",CA 94608,"Restaurant, Soul Food",https://www.minniebellssoul.com/,San Francisco
+393,Flavas Jamaican Grill,"314 Linden Avenue, CA 94080",CA 94080,"Restaurant, Caribbean, Catering",https://flavasjamaicangrillsf.com/,San Francisco
+394,Zella's Soulful Kitchen,"499 14th Street, CA 94612",CA 94612,"Restaurant, Soul Food",https://www.zellassoulfulkitchen.com/,San Francisco
+395,Lux Pub And Club,"1100 Franklin Street, CA 94607",CA 94607,"Restaurant, Pub, Bar",https://luxislife.com/,San Francisco
+396,Slides + Sides,"1100 Franklin Street, CA 94607",CA 94607,"Restaurant, Fast Food",https://www.slidesnsides.com/,San Francisco
+397,Chopbar Oakland,"190 4th Street, CA 94607",CA 94607,"Restaurant, Bar, Casual",https://www.oaklandchopbar.com/,San Francisco
+398,Glam Sity Beauty Bar,"1919 San Pablo Ave, CA 94612",CA 94612,"Salon, Braiding",,San Francisco
+399,Suya,"1312 Broadway, CA 94612",CA 94612,"Restaurant, Caribbean",https://suyaafricangrill.com/,San Francisco
+400,Tribune Tavern,"401 13th Street, CA 94612",CA 94612,"Restaurant, Casual",https://tribunetavernoakland.com/,San Francisco
+401,Betti Ono Gallery,"1427 Broadway, CA 94612",CA 94612,"Gallery, Event Space",https://bettiono.com/,San Francisco
+402,"W.S.B. & Associates, Inc","450 14th St, CA 94612",CA 94612,Security Services,https://www.wsbassociates.net/,San Francisco
+403,Stay Gold Delicatessen,"2635 San Pablo Avenue, CA 94612",CA 94612,"Restaurant, Bbq",https://www.staygolddeli.com/,San Francisco
+404,Crumble & Whisk,"6270 Overland Avenue, CA 94608",CA 94608,"Restaurant, Vegan, Bakery",https://crumbleandwhisk.com/,San Francisco
+405,Paragon Uniforms Inc,"1440 Broadway, CA 94612",CA 94612,Image Making,https://www.paragonuniform.com/,San Francisco
+406,Trap Kitchen,"420 14th Street, CA 94612",CA 94612,"Restaurant, Seafood, Fast Casual",https://www.trapkitchenoakland.com/,San Francisco
+407,Chef Michele,"1409 Franklin Street, CA 94612",CA 94612,"Restaurant, Catering",https://chefmichele.com/,San Francisco
+408,Joyce Gordon Gallery,"404 14th St, CA 94612",CA 94612,Gallery,https://www.joycegordongallery.com/,San Francisco
+409,Oakland Ink,"404 14th St, CA 94612",CA 94612,Tattoo Parlor,https://www.oaklandink.com/,San Francisco
+410,Benny Adem Grooming Parlor,"404 14th St, CA 94612",CA 94612,Barber Shop,https://bennyadem.com/#,San Francisco
+411,Moods Beauty Bar,"404 14th St, CA 94612",CA 94612,Salon,,San Francisco
+412,Green for All,"1611 Telegraph Ave, CA 94612",CA 94612,Non Profit,https://www.greenforall.org/,San Francisco
+413,Square Peg Design,"1631 Telegraph Ave, CA 94612",CA 94612,Graphic Design,https://www.sqpeg.com/,San Francisco
+414,Catered To You,"1711 Telegraph Avenue, CA 94612",CA 94612,"Restaurant, Catering, Seafood, Fast Casual",https://cateredtoyou.net/,San Francisco
+415,Feelmore Adult Gallery,"1703 Telegraph Ave, CA 94612",CA 94612,"Retail, Adult Entertainment",https://feelmore510.com/,San Francisco
+416,Suru Clothing,"1624 Telegraph Ave, CA 94612",CA 94612,"Retail, Apparel",https://www.suruclothing.com/,San Francisco
+417,The Hatch,"402 15th Street, CA 94612",CA 94612,"Restaurant, Bar",https://www.thehatchoak.com/,San Francisco
+418,The Hatch Oakland,"402 15th St, CA 94612",CA 94612,"Bar, Lounge",https://www.thehatchoak.com/,San Francisco
+419,Yahshi Bakes,"1721 Broadway, CA 94612",CA 94612,"Restaurant, Bakery",https://www.yahshibakes.com/,San Francisco
+420,Oakstop,"1716 Telegraph Ave, CA 94612",CA 94612,Co-Working Space,https://oakstop.com/,San Francisco
+421,25SecondsPR,"1716 Telegraph Ave, CA 94612",CA 94612,Marketing & PR,https://www.25secondspr.com/,San Francisco
+422,Magnolia Street Wine Lounge + Kitchen,"3443 San Pablo Avenue, CA 94608",CA 94608,"Restaurant, Bar, Casual",https://www.chefleilani.com/,San Francisco
+423,Ivy Moon Restaurant,"3112 Market St, CA 94608",CA 94608,"Restaurant, Soul Food",https://www.ivymoonrestaurant.com/,San Francisco
+424,New Karibbean City,"340 14th St, CA 94612",CA 94612,"Restaurant, Caribbean",https://www.nkcoakland.com/,San Francisco
+425,Designing Justice + Designing Spaces,"351 15th St, CA 94612",CA 94612,"Non Profit, Architecture",https://designingjustice.org/,San Francisco
+426,Rob Ben’s Restaurant & Lounge,"3627 San Pablo Avenue, CA 94608",CA 94608,"Restaurant, Soul Food, Catering, Bar",https://robbensrestaurant.com/,San Francisco
+427,The Miranda,"1739 Broadway, CA 94612",CA 94612,"Restaurant, Bar, Lounge",https://www.themirandaoakland.com/,San Francisco
+428,Jusla Eats,"1900 Telegraph Avenue, CA 94612",CA 94612,"Restaurant, Soul Food, Catering, Seafood",https://www.cheflalaharrison.com/,San Francisco
+429,Little Giant Ice Cream,"1951 Telegraph Avenue, CA 94612",CA 94612,"Restaurant, Fast Food, Family Style Restaurant",https://www.littlegianticecream.com/,San Francisco
+430,Halftime Sports Bar,"316 14th Street, CA 94612",CA 94612,"Restaurant, Bar",https://halftimesportbar.letseat.at/,San Francisco
+431,The Payback,"1618 Franklin St, CA 94612",CA 94612,"Bar, Lounge",https://thepayback510.com/,San Francisco
+432,The Alice Collective,"274 14th St, CA 94612",CA 94612,"Restaurant, Event Space",https://thealicecollective.com/cafe,San Francisco
+433,Lane-e Kefa Coffee,"77 8th Street, CA 94607",CA 94607,"Restaurant, Coffee Shop, Cafe",https://www.lane-e-kefa-coffee.cafes-city.com/,San Francisco
+434,Happy Burrito,"1616 Webster Street, CA 94612",CA 94612,"Fast Casual, Restaurant",,San Francisco
+435,Rush Bowls Oakland,"350 17th Street, CA 94612",CA 94612,"Restaurant, Vegan, Healthy Food",https://rushbowls.com/oakland,San Francisco
+436,The Hair Gym,"329 17th St, CA 94612",CA 94612,"Salon, Barber Shop",https://hairgymacademysalon.com/,San Francisco
+437,Drexl,"382 19th Street, CA 94612",CA 94612,"Restaurant, Bar",https://www.drexl.bar/,San Francisco
+438,Zanai's Love of Hair,"318 17th St, CA 94612",CA 94612,"Salon, Braiding",https://www.loveofhair.com/,San Francisco
+439,Nailphoria Day Spa,"320 17th St, CA 94612",CA 94612,"Nail Salon, Spa",https://www.nailphoria.com/,San Francisco
+440,B & C Transit Consultants,"1924 Franklin St, CA 94612",CA 94612,Consulting,https://bnctransit.com/,San Francisco
+441,Bleu Champu Salon,"310 17th St, CA 94612",CA 94612,Salon,https://www.bleuchampu.com/,San Francisco
+442,Touch Of Soul,"4336 San Pablo Avenue, CA 94608",CA 94608,"Restaurant, Soul Food, Seafood",https://touch-of-soul.business.site/,San Francisco
+443,Kingston 11,"2270 Telegraph Avenue, CA 94612",CA 94612,"Restaurant, Caribbean",https://kingston11eats.com/,San Francisco
+444,Ashara Ekundayo Gallery,"480 23rd St, CA 94612",CA 94612,Gallery,https://www.asharaekundayogallery.com/,San Francisco
+445,Blue Nile Ethiopian Restaurant,"160 14th Street, CA 94612",CA 94612,"Restaurant, African, Ethiopian",https://www.bluenilefood.com/,San Francisco
+446,Strategy Squad,"1901 Harrison St, CA 94612",CA 94612,Financial Services,https://strategysquad.com/,San Francisco
+447,Abyssinia Market,"2525 Telegraph Ave, CA 94612",CA 94612,Grocery,,San Francisco
+448,McMullen,"2257 Broadway, CA 94612",CA 94612,"Retail, Apparel",https://shopmcmullen.com/,San Francisco
+449,Suya,"408 22nd St, CA 94612",CA 94612,"Restaurant, Caribbean",https://suyaafricangrill.com/,San Francisco
+450,Brown Sugar Kitchen,"2295 Broadway, CA 94612",CA 94612,"Restaurant, Soul Food, Seafood",https://www.brownsugarkitchen.com/,San Francisco
+451,Era Art Bar & Lounge,"19 Grand Ave, CA 94612",CA 94612,"Bar, Lounge",https://www.oaklandera.com/era/,San Francisco
+452,Chef Ron’s Pastries,"344 Thomas L Berkley Way, CA 94612",CA 94612,Bakery,https://www.crpastries.com/,San Francisco
+453,Anfilo Coffee,"33 Grand Ave, CA 94612",CA 94612,Coffee Shop,https://anfilo.com/,San Francisco
+454,Mela Bistro,"35 Grand Avenue, CA 94612",CA 94612,"Restaurant, Catering, Ethiopian",https://www.melabistro.com/,San Francisco
+455,Black Girls Code ~ Corporate Office,"2323 Broadway, CA 94612",CA 94612,Non Profit,https://www.blackgirlscode.com/,San Francisco
+456,Impact Hub Oakland,"2323 Broadway, CA 94612",CA 94612,Co-Working Space,https://oakland.impacthub.net/,San Francisco
+457,YogaLove,"3851 Market St, CA 94608",CA 94608,"Gym, Yoga Studio",https://yogaloveoakland.com/,San Francisco
+458,Red Bay Coffee,"2327 Broadway, CA 94612",CA 94612,Coffee Shop,https://www.redbaycoffee.com/,San Francisco
+459,Red Bay Coffee Box,"2327 Broadway, CA 94612",CA 94612,"Restaurant, Coffee Shop, Cafe",https://www.redbaycoffee.com/,San Francisco
+460,Gourmet Puff,"478 25th Street, CA 94612",CA 94612,"Bakery, Nigerian, Restaurant, Vegan, African",https://gourmetpuff.co/,San Francisco
+461,Elve’s BBQ & Soul Food,"3214 Martin Luther King Jr Way, CA 94609",CA 94609,"Restaurant, BBQ",,San Francisco
+462,Calavera,"2337 Broadway, CA 94612",CA 94612,"Restaurant, Ethnic",https://calaveraoakland.com/,San Francisco
+463,Lula Restaurant,"2805 Telegraph Ave, CA 94609",CA 94609,"Restaurant, Ethiopian",https://www.lulaoakland.com/,San Francisco
+464,Sankofa African Arts & Jewelry,"2805 Telegraph Ave, CA 94609",CA 94609,"Salon, Apparel",,San Francisco
+465,Alamar Kitchen & Bar,"100 Grand Avenue, CA 94612",CA 94612,"Restaurant, Catering, Seafood, Dining",https://www.alamaroakland.com/,San Francisco
+466,AU Lounge,"2430 Broadway, CA 94612",CA 94612,"Restaurant, Bar, Lounge",https://www.auoakland.com/,San Francisco
+467,Chef Smelly's,"2430 Broadway, CA 94612",CA 94612,"Restaurant, Soul Food, Seafood, Fast Casual",,San Francisco
+468,Gregory's Gourmet Desserts,"285 23rd Street, CA 94612",CA 94612,"Restaurant, Bakery, Catering",https://www.gregorysgourmetdesserts.com/,San Francisco
+469,James & The Giant Cupcake,"6326 San Pablo Avenue, CA 94608",CA 94608,"Restaurant, Bakery",https://www.jamesandthegiantcupcake.com/,San Francisco
+470,Oakland Smiles,"3147 Telegraph Ave, CA 94609",CA 94609,Dental,https://oaklandsmiles.com/,San Francisco
+471,Hella Nuts,"3645 Martin Luther King Junior Way, CA 94609",CA 94609,"Grocery, Retail",https://thatshellanuts.com/,San Francisco
+472,Breathe Day Spa & Boutique,"4408 Market St, CA 94608",CA 94608,Spa,https://www.breathespaoakland.com/,San Francisco
+473,Cali Alley,"1012 Grayson Street, CA 94710",CA 94710,"Restaurant, Dining, Fast Casual",https://calialley.com/,San Francisco
+474,Cafe Dejena,"3939 Martin Luther King Junior Way, CA 94609",CA 94609,"Restaurant, Eritrean, Catering, African",https://www.cafedejena.com/,San Francisco
+475,Marcus Books,"3900 Martin Luther King Jr Way, CA 94609",CA 94609,"Retail, Book Store",https://marcusbooksoakland.com/,San Francisco
+476,Fouché's Hudson Funeral Home,"3665 Telegraph Ave, CA 94609",CA 94609,Funeral Home,https://www.fouchesfuneralhome.com/,San Francisco
+477,Pietisserie,"1605 2nd Ave, CA 94606",CA 94606,Bakery,https://www.pietisserie.com/,San Francisco
+478,BlinkLAB Architecture,"4232 Martin Luther King Jr Way, CA 94609",CA 94609,Architecture,https://www.blink-lab.com/,San Francisco
+479,Enssaro,"357 Grand Ave, CA 94610",CA 94610,"Restaurant, Ethiopian",https://www.enssaro.com/,San Francisco
+480,Enssaro,"357A Grand Avenue, CA 94610",CA 94610,"Restaurant, African, Ethiopian",https://www.enssaro.com/,San Francisco
+481,Anthony's Cookies,"2575 San Pablo Avenue, CA 94702",CA 94702,"Restaurant, Bakery",https://www.anthonyscookies.com/,San Francisco
+482,Cafe Eritrea D'afrique,"4069 Telegraph Avenue, CA 94609",CA 94609,"Restaurant, Eritrean, Catering, African",https://cafeeritreadafrique.com/,San Francisco
+483,Grandeur,"366B Grand Avenue, CA 94610",CA 94610,"Restaurant, Vegan, Healthy Food",https://www.grandeuroakland.com/,San Francisco
+484,Cafe Eritrea D'Afrique,"4073 Telegraph Ave, CA 94609",CA 94609,"Restaurant, Eritrean",https://cafeeritreadafrique.com/,San Francisco
+485,Oakland's Very Own Tavern,"5319 Martin Luther King Junior Way, CA 94608",CA 94608,"Casual, Restaurant",https://ovotavern.com/,San Francisco
+486,Nappy or Not Inc,"411 E 18th St, CA 94606",CA 94606,Salon,https://www.nappyornot.com/#/top,San Francisco
+487,Essence Beauty Supply,"411 E 18th St, CA 94606",CA 94606,Beauty Supply Store,,San Francisco
+488,Smokin Woods Bbq,"4307 Telegraph Avenue, CA 94609",CA 94609,"Restaurant, Catering, Bbq",https://www.smokinwoodsbbq.com/,San Francisco
+489,It's All Good Bakery Inc,"5622 Martin Luther King Jr Way, CA 94609",CA 94609,Bakery,https://www.itsallgoodbakery.com/menu.php,San Francisco
+490,It's All Good Bakery,"5622 Martin Luther King Junior Way, CA 94609",CA 94609,"Restaurant, Bakery",https://www.itsallgoodbakery.com/home.php,San Francisco
+491,Station Thirty Three,"440 Grand Ave, CA 94610",CA 94610,Barber Shop,,San Francisco
+492,Phat Beets Saturday Farmers Market Feel the Beet Farmers Market,"4799 Shattuck Ave, CA 94609",CA 94609,"Grocery, Farmers Market",https://www.phatbeetsproduce.org/,San Francisco
+493,Universal Beauty Supply and Salon,"4797 Telegraph Ave, CA 94609",CA 94609,"Beauty Supply Store, Salon",,San Francisco
+494,Concept Forty Seven Oakland,"4725 Telegraph Ave, CA 94609",CA 94609,"Retail, Furniture & Home Decor",https://beijaflornaturals.com/contact/,San Francisco
+495,Stay Gold Delicatessen,"4935 Shattuck Avenue, CA 94609",CA 94609,"Restaurant, Bbq",https://www.staygolddeli.com/,San Francisco
+496,Abesha Ethiopian Cuisine,"4929 Shattuck Ave, CA 94609",CA 94609,"Restaurant, Ethiopian",,San Francisco
+497,Alchemy Collective Cafe,"1741 Alcatraz Avenue, CA 94703",CA 94703,"Restaurant, Coffee Shop",https://www.alchemycollectivecafe.com/,San Francisco
+498,The Braid Bar,"3300 Adeline St, CA 94703",CA 94703,"Salon, Braiding",https://www.braidbaroakland.com/,San Francisco
+499,Nuttin' Butter Cookies,"1371 Dwight Way, CA 94702",CA 94702,"Restaurant, Bakery",https://www.nuttinbuttercookies.com/,San Francisco
+500,Asmara Restaurant,"5020 Telegraph Avenue, CA 94609",CA 94609,"Restaurant, Eritrean, Catering, Ethnic",https://asmararestaurant.com/,San Francisco
+501,Teni East Kitchen,"4015 Broadway, CA 94611",CA 94611,"Restaurant, Ethnic",https://www.tenieastkitchen.com/,San Francisco
+502,Pietisserie,"1225 Fourth Street, CA 94710",CA 94710,"Restaurant, Bakery",https://www.pietisserie.com/,San Francisco
+503,Lemat,"3212 Adeline Street, CA 94703",CA 94703,"Restaurant, Ethnic, African, Ethiopian",https://www.lemateats.com/,San Francisco
+504,Malibu's Burgers,"3905 Piedmont Avenue, CA 94611",CA 94611,"Restaurant, Vegan, Healthy Food, Fast Food",https://www.malibusburgers.com/,San Francisco
+505,Rasa Caffe,"3140 Martin Luther King Junior Way, CA 94703",CA 94703,"Restaurant, Coffee Shop",https://www.rasacaffe.com/,San Francisco
+506,Minto Jamaican Market,"4042 Broadway, CA 94611",CA 94611,"Caribbean, Market, Grocery",https://mintojamaicanmarket.com/,San Francisco
+507,Johnathan's Sandwich House,"2316 Santa Clara Avenue, CA 94501",CA 94501,"Restaurant, Catering, Fast Food",https://www.johnathanssandwichalameda.com/,San Francisco
+508,Red Sea,"5200 Claremont Avenue, CA 94618",CA 94618,"Eritrean, Ethiopian, Ethnic, Restaurant, African",https://redseaoakland.com/,San Francisco
+509,Red Sea Diner,"5200 Claremont Ave, CA 94618",CA 94618,"Restaurant, Eritrean, Ethiopian",,San Francisco
+510,Face and Body Day Spa,"450 Santa Clara Ave, CA 94610",CA 94610,"Salon, Spa",https://www.fabdayspa.com/,San Francisco
+511,Cafe Romanat,"462 Santa Clara Avenue, CA 94610",CA 94610,"Restaurant, Ethnic, Catering, Ethiopian",https://www.caferomanat.com/,San Francisco
+512,ANI Private Security & Patrol,"4124 Broadway, CA 94611",CA 94611,Security Services,https://www.anisecurity.net/,San Francisco
+513,Alyce on Grand,"3223 Grand Ave, CA 94610",CA 94610,"Retail, Apparel",https://www.oaklandgrown.org/alyce-on-grand/,San Francisco
+514,Shroder's Playmates,"484 Lake Park Ave, CA 94610",CA 94610,Other,https://www.shrodersplaymates.com/,San Francisco
+515,Vegan Mob,"500 Lake Park Avenue, CA 94610",CA 94610,"Restaurant, Soul Food, Bbq",https://veganmob.biz/,San Francisco
+516,Caña,"530 Lake Park Avenue, CA 94610",CA 94610,"Catering, Caribbean, Ethnic, Bar, Restaurant",https://canaoakland.com/,San Francisco
+517,Alkali Rye - Oakland's Beverage Shop,"3256 Grand Ave, CA 94610",CA 94610,Retail,https://www.sipalkalirye.com/,San Francisco
+518,Cold Cocked Beverages LLC,"2020 Dennison St, CA 94606",CA 94606,"Delivery Food Supplier, Trucking",https://www.manta.com/c/mhhzpmz/cold-cocked-beverages-llc,San Francisco
+519,Taylor Jay,"3304 Grand Ave, CA 94610",CA 94610,"Retail, Apparel",https://www.taylorjaycollection.com/,San Francisco
+520,Center Stage West,"3227 Lakeshore Ave, CA 94610",CA 94610,Salon,https://www.centerstagewest.com/,San Francisco
+521,Oxford Way Tailoring,"6221 Shattuck Ave, CA 94609",CA 94609,Tailor,https://www.oxfordwaytailoring.com/,San Francisco
+522,"The Skin Studio, Inc.","4125 Piedmont Ave, CA 94611",CA 94611,"Spa, Facial, Wax",https://theskinstudio.com/,San Francisco
+523,Mannequin Madness,"1031 Cotton St, CA 94606",CA 94606,Retail,https://www.mannequinmadness.com/,San Francisco
+524,Yahshi Bakes,"4168 Piedmont Ave, CA 94611",CA 94611,Bakery,https://www.yahshibakes.com/,San Francisco
+525,Souly Body,"4168 Piedmont Ave, CA 94611",CA 94611,Spa,https://www.soulybody.com/,San Francisco
+526,Cuts N Stuff Hair Designs,"4352 Broadway, CA 94611",CA 94611,Salon,https://www.cnshairdesigns.com/,San Francisco
+527,Flip N Soul,"2101 14th Avenue, CA 94606",CA 94606,"Restaurant, Soul Food, Seafood",https://www.flipnsoul.com/,San Francisco
+528,Plant Based Fitness,"2706 Park Blvd, CA 94606",CA 94606,Gym,https://www.plantbfitness.com/,San Francisco
+529,Shirley's Designs & Alterations,"3405 Lakeshore Ave, CA 94610",CA 94610,Tailor,https://www.shirleysdesignsoakland.com/,San Francisco
+530,Uhuru Furniture & Collectibles,"3738 Grand Ave, CA 94610",CA 94610,"Retail, Furniture & Home Decor",https://uhurufurniture.blogspot.com/,San Francisco
+531,Kc's Bbq,"1235 San Pablo Avenue, CA 94706",CA 94706,"Restaurant, Catering, Bbq",https://kcsbbq.com/,San Francisco
+532,Bijou Health,"1440 W Taylor St, IL 60607",IL 60607,Healthcare,https://www.bijouhealth.com/,Chicago
+533,Amber Inn Hotel,"3901 S. Michigan Avenue, IL 60653",IL 60653,Hotel,,Chicago
+534,Sweet Polly's Kitchen,"135 North Kedzie Avenue, IL 60612",IL 60612,"Restaurant, Soul Food, Catering",https://www.sweetpollykitchen.com/,Chicago
+535,Liberty Bank and Trust,"1111 S. Homan Ave, IL 60624",IL 60624,Bank,https://www.libertybank.net/,Chicago
+536,What U Need Is...,"Worldwide , IL 60647",IL 60647,Marketing & Pr,https://www.whatuneedis.com/,Chicago
+537,SheSlayed,"Online, IL 60651",IL 60651,Retail,https://www.sheslayedlingerie.com/,Chicago
+538,The Licking,"5045 West Madison Street, IL 60644",IL 60644,"Restaurant, Soul Food, Seafood",https://www.thelicking.com/,Chicago
+539,"Lawn Care Maven, LLC","503 E 61st Street 118, IL 60637",IL 60637,Home,https://www.lawncaremaven.com/,Chicago
+540,Ebony Analytics,"6144 S St Lawrence Ave, IL 60637",IL 60637,Technology,https://www.ebonyanalytics.com/,Chicago
+541,Rhythm of the Street Dance Studio,"4301 N Kedzie Ave, IL 60618",IL 60618,Education,https://www.rhythmofthestreet.org/,Chicago
+542,Holiday Inn Express & Suites Chicago Midway Airport,"6500 South Cicero Ave, IL 60638",IL 60638,Hotel,https://www.ihg.com/holidayinnexpress/hotels/us/en/chicago/chimw/hoteldetail?rpb=hotel&crUrl=/h/d/hi/1/en/availsearch&ias=y,Chicago
+543,Hampton Inn Chicago-Midway Airport,"6540 S. Cicero Ave., IL 60638",IL 60638,Hotel,https://hamptoninn3.hilton.com/en/hotels/illinois/hampton-inn-chicago-midway-airport-CHIMWHX/index.html,Chicago
+544,Marriott Chicago Midway,"6520 South Cicero Ave, IL 60638",IL 60638,Hotel,https://www.marriott.com/hotels/travel/chima-chicago-marriott-midway/,Chicago
+545,Courtyard Chicago Midway Airport,"6610 South Cicero Avenue, IL 60638",IL 60638,Hotel,https://www.marriott.com/hotels/travel/chicm-courtyard-chicago-midway-airport/,Chicago
+546,Hilton Garden Inn Chicago/Midway Airport,"6530 S. Cicero Avenue, IL 60638",IL 60638,Hotel,https://hiltongardeninn3.hilton.com/en/hotels/illinois/hilton-garden-inn-chicago-midway-airport-MDWAHGI/index.html,Chicago
+547,Sleep Inn Midway Airport,"6650 S. Cicero Ave., IL 60638",IL 60638,Hotel,https://www.choicehotels.com/illinois/bedford-park/sleep-inn-hotels/il103?exp&nadult=1&nchild=0&sarea=85544&schain=Z&scity&scountry=US&sid=lMPki.4jt20,Chicago
