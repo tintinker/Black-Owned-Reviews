@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
@@ -15,18 +17,22 @@ PLACE_URL_IDENTIFIER = "google.com/maps/place"
 PANEL_LOADED_IDENTIFIERS = ['Suggest an edit', 'About this data']
 
 def get_driver(debug=False):
-    options = Options()
-
-    if not debug:
-        options.add_argument("--headless")
-    else:
-        options.add_argument("--window-size=1366,768")
-
-    options.add_argument("--disable-notifications")
-    options.add_argument("--lang=en-GB")
-    input_driver = webdriver.Chrome(options=options)
-
-    return input_driver
+    options = webdriver.ChromeOptions()
+    options.add_argument('--log-level=3')
+    options.add_argument('--ignore-certificate-errors')
+    options.add_argument('--incognito')
+    options.add_argument('--no-sandbox')
+    options.add_argument('--enable-automation')
+    options.add_argument('--disable-gpu')
+    options.add_argument('--disable-extensions')
+    options.add_argument('--disable-infobars')
+    options.add_argument('--disable-browser-side-navigation')
+    options.add_argument('--disable-dev-shm-usage')
+    options.add_argument('--disable-features=VizDisplayCompositor')
+    options.add_argument('--dns-prefetch-disable')
+    options.add_argument('--headless')
+    options.add_argument('--hide-scrollbars')
+    return webdriver.Chrome(ChromeDriverManager().install(), options=options)
 
 def wait_for_panel_data(driver, debug=False):
     panel_text = ""
