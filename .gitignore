@@ -2,3 +2,6 @@ secrets.py
 env
 __pycache__/
 .DS_Store
+geckodriver.log
+testing/
+.env.local
