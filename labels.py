@@ -1,23 +1,53 @@
 # -*- coding: utf-8 -*-
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.firefox.options import Options
 import time
 import logging
+import os
 
 log = logging.getLogger(__name__)
 
-MAX_WAIT = 10
+MAX_WAIT = 8
 MAX_TRIES = 4
 DELAY = 2
 PLACE_URL_IDENTIFIER = "google.com/maps/place"
 PANEL_LOADED_IDENTIFIERS = ['Suggest an edit', 'About this data']
 
+def not_found_response(error_type, url):
+    return {
+        "success": False, 
+        "error_type": error_type,
+        "url": url,
+        "lgbtq": None, 
+        "veteran": None, 
+        "women": None, 
+        "black": None
+    }
+
+
+def labels_response(panel_text):
+    return {
+        "success": True,
+        "error_type": None,
+        "url": None,
+        "lgbtq": bool("LGBTQ friendly" in panel_text),
+        "veteran": bool("Identifies as veteran-led" in panel_text),
+        "women": bool("Identifies as women-led" in panel_text),
+        "black": bool("Identifies as Black-owned" in panel_text),
+    }
+
+def name_not_found(url):
+    return not_found_response("missing_name", url)
+
+def labels_not_found(url):
+    return not_found_response("missing_labels", url)
+
 def get_driver(debug=False):
-    options = webdriver.ChromeOptions()
+    options = webdriver.FirefoxOptions()
     options.add_argument('--log-level=3')
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--incognito')
@@ -29,10 +59,13 @@ def get_driver(debug=False):
     options.add_argument('--disable-browser-side-navigation')
     options.add_argument('--disable-dev-shm-usage')
     options.add_argument('--disable-features=VizDisplayCompositor')
-    options.add_argument('--dns-prefetch-disable')
-    options.add_argument('--headless')
+    options.add_argument('--dns-prefetch-disable')    
     options.add_argument('--hide-scrollbars')
-    return webdriver.Chrome(ChromeDriverManager().install(), options=options)
+
+    if not debug:
+        options.add_argument('--headless')
+
+    return webdriver.Firefox(executable_path=os.getenv('FIREFOX_DRIVER'), options=options)
 
 def wait_for_panel_data(driver, debug=False):
     panel_text = ""
@@ -68,31 +101,19 @@ def check_labels(search_url, debug=False):
     wait = WebDriverWait(driver, MAX_WAIT)
 
     #wait until page redirects from the search view to the place details view
-    wait.until(EC.url_contains(PLACE_URL_IDENTIFIER))
-
-    #if we never reach the place details view, exit
-    if PLACE_URL_IDENTIFIER not in driver.current_url:
+    try:
+        wait.until(EC.url_contains(PLACE_URL_IDENTIFIER))
+    except TimeoutException:
         driver.quit()
-        return {
-            "success": False
-        }
-
+        return name_not_found(search_url)
 
     panel_text, ok = wait_for_panel_data(driver, debug)
     driver.quit()
 
     if not ok:
-         return {
-            "success": False
-        }
+         return labels_not_found(search_url)
 
-    return {
-        "success": True,
-        "lgbtq": bool("LGBTQ friendly" in panel_text),
-        "veteran": bool("Identifies as veteran-led" in panel_text),
-        "women": bool("Identifies as women-led" in panel_text),
-        "black": bool("Identifies as Black-owned" in panel_text),
-    }
+    return labels_response(panel_text)
 
 if __name__ == '__main__':
     URL = "https://www.google.com/maps/place/First+Goal+Heating+and+Cooling/@40.8861359,-74.5471438,17z/data=!3m1!4b1!4m5!3m4!1s0x89c301744a6ab527:0xde887089293ef0c2!8m2!3d40.8861319!4d-74.5449551"
