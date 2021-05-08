@@ -4,3 +4,11 @@ __pycache__/
 output/
 data/
 citylist.txt
+.DS_Store
+geckodriver.log
+testing/
+.env.local
+city_directories/losangeles.csv
+city_directories/losangelescache.json
+city_directories/sanfrancisco.csv
+city_directories/sanfranciscocache.json
