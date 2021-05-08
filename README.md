@@ -26,6 +26,6 @@ If not: `$ source env/bin/activate`
 `(env) $ source .env.local`   
 2. Add Business License Directories in CSV form to the `city_directories` folder  
 3. Run the script  
-`(env) $ python3 licence_directory.py city_directories/seattle.csv`
+`(env) $ python3 licence_directory.py city_directories/seattle.csv`  
 Cache files will be generated throughout (ex. `city_directories/seattlecache.csv`, output available in csv form at the end (ex. `city_directories/seattleoutput.csv`)
 
