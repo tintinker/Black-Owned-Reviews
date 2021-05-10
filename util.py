@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
+import os
 
 def not_found_response(error_type, url):
     """Auxilary function for generating an error response. This function should not be exported. Use name_not_found orlabels_not_fund instead
