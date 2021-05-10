@@ -1,84 +1,43 @@
+"""
+labels.py
+Scraper to extract labels from gmaps entry 
+@author Justin Tinker (jatinker@stanford.edu)
+"""
 # -*- coding: utf-8 -*-
-from webdriver_manager.firefox import GeckoDriverManager
+from util import get_driver, labels_response, name_not_found, labels_not_found
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 import time
 import logging
 import os
 
 log = logging.getLogger(__name__)
 
-MAX_WAIT = 8
-MAX_TRIES = 4
-DELAY = 2
-PLACE_URL_IDENTIFIER = "google.com/maps/place"
-PANEL_LOADED_IDENTIFIERS = ['Suggest an edit', 'About this data']
+MAX_WAIT = 8 #time in seconds to wait for redirect
+MAX_TRIES = 4 #number of times to look for indicators that label information has loaded
+DELAY = 2 #number of seconds to wait between tries
+PLACE_URL_IDENTIFIER = "google.com/maps/place" #indicates gmaps has found the place we're searching for
+PANEL_LOADED_IDENTIFIERS = ['Suggest an edit', 'About this data'] #presence of one of these texts indicates label information has loaded
 
-def not_found_response(error_type, url):
-    return {
-        "success": False, 
-        "error_type": error_type,
-        "url": url,
-        "lgbtq": None, 
-        "veteran": None, 
-        "women": None, 
-        "black": None
-    }
+def wait_for_panel_data(driver):
+    """Holds the browser until the panel containing the labels is loaded, if  possible
 
+    Args:
+        driver (webdriver.Firefox): Browser Instance
 
-def labels_response(panel_text):
-    return {
-        "success": True,
-        "error_type": None,
-        "url": None,
-        "lgbtq": bool("LGBTQ friendly" in panel_text),
-        "veteran": bool("Identifies as veteran-led" in panel_text),
-        "women": bool("Identifies as women-led" in panel_text),
-        "black": bool("Identifies as Black-owned" in panel_text),
-    }
-
-def name_not_found(url):
-    return not_found_response("missing_name", url)
-
-def labels_not_found(url):
-    return not_found_response("missing_labels", url)
-
-def get_driver(debug=False):
-    options = webdriver.FirefoxOptions()
-    options.add_argument('--log-level=3')
-    options.add_argument('--ignore-certificate-errors')
-    options.add_argument('--incognito')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--enable-automation')
-    options.add_argument('--disable-gpu')
-    options.add_argument('--disable-extensions')
-    options.add_argument('--disable-infobars')
-    options.add_argument('--disable-browser-side-navigation')
-    options.add_argument('--disable-dev-shm-usage')
-    options.add_argument('--disable-features=VizDisplayCompositor')
-    options.add_argument('--dns-prefetch-disable')    
-    options.add_argument('--hide-scrollbars')
-
-    if not debug:
-        options.add_argument('--headless')
-
-    return webdriver.Firefox(executable_path=os.getenv('FIREFOX_DRIVER'), options=options)
-
-def wait_for_panel_data(driver, debug=False):
+    Returns:
+        tuple(string, bool): Text of the panel (if available), bool indicating whether the panel was successfully loaded (true if yes, false if timed out)
+    """
     panel_text = ""
-    tries = 0
-
+    
     #check panel fully loaded
-    while tries <= MAX_TRIES:
+    for i in range(MAX_TRIES):
         for identifier in PANEL_LOADED_IDENTIFIERS:
             if identifier in panel_text:
                 return (panel_text, True)
 
         time.sleep(DELAY)
-        tries += 1
 
         #collect text from all the panels
         panel_text = ""
@@ -92,11 +51,27 @@ def wait_for_panel_data(driver, debug=False):
     #if we exit at MAX_TRIES, indicate that content never loaded
     log.debug(f"Reached max tries, panel text: {panel_text}")
     return (panel_text, False)
-
-    
-    
+ 
 def check_labels(search_url, debug=False):
-    driver = get_driver(debug=debug)
+    """Get the labels (black owned, women-led, etc.) for a particular business on googlemaps
+
+    Args:
+        search_url (string): url describing place in the form https://www.google.com/maps/search/{name}+near+{address}'
+        debug (bool, optional): If true, run visible browser, if false run headless. Defaults to False.
+
+    Returns:
+        dict: {
+                success (bool): True if the place was found and the label information was loaded. False otherwise
+                error_type (str or None): If not successful, 'missing_place' if place not found and 'missing_labels' if labels not loaded. None if not successful
+                url (str or None): If not successful, search url of the place that generated this request. None if successful
+                lgbtq (bool or None): If successful, True if place identifies as lgbtq friendly. None if not successful
+                veteran (bool or None): If successful, True if place identifies as verteran-owned. None if not successful
+                women (bool or None): If successful, True if place identifies as women-led. None if not successful
+                black (bool or None): If successful, True if place identifies as black owned. None if not successful
+            }
+    """
+
+    driver = get_driver(debug)
     driver.get(search_url)
     wait = WebDriverWait(driver, MAX_WAIT)
 
@@ -107,14 +82,10 @@ def check_labels(search_url, debug=False):
         driver.quit()
         return name_not_found(search_url)
 
-    panel_text, ok = wait_for_panel_data(driver, debug)
+    panel_text, ok = wait_for_panel_data(driver)
     driver.quit()
 
     if not ok:
          return labels_not_found(search_url)
 
     return labels_response(panel_text)
-
-if __name__ == '__main__':
-    URL = "https://www.google.com/maps/place/First+Goal+Heating+and+Cooling/@40.8861359,-74.5471438,17z/data=!3m1!4b1!4m5!3m4!1s0x89c301744a6ab527:0xde887089293ef0c2!8m2!3d40.8861319!4d-74.5449551"
-    print(check_labels(URL, debug=True))
