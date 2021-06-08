@@ -41,7 +41,7 @@ Cache files will be generated throughout (ex. `city_directories/seattlecache.csv
 ## Run the scraper [Amazon EC2]
 On local computer:   
 1. Switch to ec2 branch   
-2-4. Follow steps 2-4 from above   
+Follow steps 2-4 from above   
 5. Push changes to `ec2` branch   
 On Amazon EC2  
 6. Get the ip address of the ec2 instance from the aws dev view and connect using the pem file: `ssh -i "~/.ssh/blackowned.pem" ec2-user@xxx-##-##-##-###.us-east-#.compute.amazonaws.com`  
