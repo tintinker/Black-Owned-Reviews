@@ -89,7 +89,7 @@ def get_range():
 
 def running_on_ec2():
     log.debug("Check running on ec2")
-    return os.getenv("RUN_ENVIRONMENT").lower() == "ec2"
+    return os.environ["RUN_ENVIRONMENT"].lower() == "ec2"
 
 def get_driver(debug=False):
     """Get new driver to run scraper

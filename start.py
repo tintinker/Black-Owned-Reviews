@@ -2,7 +2,7 @@ from ldp import LDP
 import parsers
 import logging
 
-logging.basicConfig(filename='scraper_run.log', encoding='utf-8', level=logging.DEBUG)
+logging.basicConfig(filename='scraper_run.log', level=logging.DEBUG)
 
 
 if __name__ == '__main__':
@@ -14,10 +14,10 @@ if __name__ == '__main__':
     ]
 
     for city_info in lst:
-        try:
-            city, input_filename, addr_func, business_name_func, filter_func = city_info
-            print("-" * 10, f"Running {city}", "-" * 10)
-            l = LDP(input_filename, addr_func, business_name_func, filter_func=filter_func)
-            l.process()
-        except Exception as e:
-            print("!" * 10, "Exception", str(e), "!" * 10)
+        # try:
+        city, input_filename, addr_func, business_name_func, filter_func = city_info
+        print("-" * 10, f"Running {city}", "-" * 10)
+        l = LDP(input_filename, addr_func, business_name_func, filter_func=filter_func)
+        l.process()
+        # except Exception as e:
+        #     print("!" * 10, "Exception", str(e), "!" * 10)

@@ -122,7 +122,6 @@ def get_info(search_url, debug=False):
 
     followed_suggestion = False
 
-    import pdb;pdb.set_trace()
     for _ in range(MAX_TRIES):
         time.sleep(DELAY)
         scroll_to_bottom(driver)
