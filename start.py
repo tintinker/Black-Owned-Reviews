@@ -13,7 +13,7 @@ if __name__ == '__main__':
         try:
             city, input_filename, addr_func, business_name_func, filter_func = city_info
             print("-" * 10, f"Running {city}", "-" * 10)
-            l = LDP(input_filename, addr_func, business_name_func, filter_func=filter_func,  debug=True)
+            l = LDP(input_filename, addr_func, business_name_func, filter_func=filter_func)
             l.process()
         except Exception as e:
             print("!" * 10, "Exception", str(e), "!" * 10)
