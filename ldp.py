@@ -1,14 +1,11 @@
-from labels import check_labels
+from util import flatten_gmaps_response
+from gmaps import get_info
 import json
 from os import path
-from sys import argv, exit
-from random import random
 import pandas as pd
 import logging
 
 log = logging.getLogger(__name__)
-
-CACHE_SAVE_FREQ = 1/5 #Approx frequency to save the cache to file on disk. .2 ~> stop to save cache after ~20% of requests 
 
 def plus_replace(mystr):
     """Convert strings to URL friendly format
@@ -60,7 +57,7 @@ class LDP:
         except: #if file doesn't exist or is ilformated, use empty
             self.cache = {}
 
-    def get_labels(self, row):
+    def get_gmaps_info(self, row):
         """Generate url, and extract labels using cache or scraper
         """
         addr = self.extract_addr(row)
@@ -75,17 +72,17 @@ class LDP:
 
         if url in self.cache and self.use_cache:
             log.debug(f"Using Cache for {name}")
-            labels = self.cache[url]
+            gmaps_info = self.cache[url]
         else:
-            labels = check_labels(url, debug=self.debug)
-            self.cache[url] = labels
+            gmaps_info = get_info(url, debug=self.debug)
+            self.cache[url] = gmaps_info
         
-        if self.use_cache and random() < CACHE_SAVE_FREQ:
+        if self.use_cache:
             log.debug(f"Saving Cache to {self.cache_filename}")
             with open(self.cache_filename, 'w+') as f:
                 json.dump(self.cache, f)
 
-        return pd.Series({'success': labels['success'], 'error_type': labels['error_type'], 'lgbtq': labels['lgbtq'], 'veteran': labels['veteran'], 'women': labels['women'], 'black': labels['black']})
+        return pd.Series(flatten_gmaps_response(gmaps_info))
 
     def process(self):
         """Run the script on the entire city directory file
@@ -94,7 +91,7 @@ class LDP:
         if self.filter:
             df = df[self.filter(df)]  
 
-        df = df.merge(df.apply(lambda row: self.get_labels(row), axis=1), left_index=True, right_index=True)
+        df = df.merge(df.apply(lambda row: self.get_gmaps_info(row), axis=1), left_index=True, right_index=True)
         df.to_csv(self.output_filename)
         return df
 

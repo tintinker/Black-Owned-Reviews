@@ -1,35 +1,80 @@
+import os
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 
-def not_found_response(error_type, url):
+def gmaps_reponse(labels_response, reviews_response):
+    return {
+        "labels": labels_response,
+        "reviews": reviews_response
+    }
+
+def flatten_gmaps_response(response):
+    flattened = {}
+    for key in response["labels"]:
+        flattened[f"labels_{key}"] = response["labels"][key]
+    for key in response["reviews"]:
+        flattened[f"reviews_{key}"] = response["reviews"][key]
+    return flattened
+
+def not_found_response(error_type, followed_suggestion, url):
     """Auxilary function for generating an error response. This function should not be exported. Use name_not_found orlabels_not_fund instead
     """
     return {
         "success": False, 
         "error_type": error_type,
         "url": url,
+        "category": None,
+        "followed_suggestion": followed_suggestion,
         "lgbtq": None, 
         "veteran": None, 
         "women": None, 
         "black": None
     }
 
-def labels_response(panel_text):
+def labels_response(panel_text, category, followed_suggestion):
     return {
         "success": True,
         "error_type": None,
         "url": None,
+        "category": category,
+        "followed_suggestion": followed_suggestion,
         "lgbtq": bool("LGBTQ friendly" in panel_text),
         "veteran": bool("Identifies as veteran-led" in panel_text),
         "women": bool("Identifies as women-led" in panel_text),
         "black": bool("Identifies as Black-owned" in panel_text),
     }
 
+def reviews_response(search_url, review_tuple):
+    avg_rating, num_ratings, text_list =  review_tuple
+
+    if avg_rating is None or num_ratings is None:
+        return no_reviews_response("review_link_not_found", search_url)
+    if avg_rating < 0 or num_ratings < 0:
+        return no_reviews_response("summary_not_found", search_url)
+
+    return {
+        "success": True,
+        "error_type": None,
+        "url": None,
+        "avg_rating": avg_rating,
+        "num_ratings": num_ratings,
+        "text_list": text_list
+    }
+
+def no_reviews_response(error_type, search_url):
+    return {
+        "success": True,
+        "error_type": error_type,
+        "url": search_url,
+        "avg_rating": None,
+        "num_ratings": None,
+        "text_list": None
+    }
+
 def name_not_found(url):
-    return not_found_response("missing_name", url)
+    return not_found_response("missing_name", False, url)
 
 def labels_not_found(url):
-    return not_found_response("missing_labels", url)
+    return not_found_response("missing_labels", True, url)
 
 def get_driver(debug=False):
     """Get new driver to run scraper
