@@ -1,5 +1,8 @@
 import os
 from selenium import webdriver
+import logging
+
+log = logging.getLogger(__name__)
 
 def gmaps_reponse(labels_response, reviews_response):
     return {
@@ -76,6 +79,18 @@ def name_not_found(url):
 def labels_not_found(url):
     return not_found_response("missing_labels", True, url)
 
+def get_range():
+    try:
+        if os.getenv("USE_RANGE", 'False').lower() in ('true', '1', 't'):
+            return int(os.getenv("RANGE_START", -1)), int(os.getenv("RANGE_END", -1))
+        return -1,-1
+    except:
+        return -1,-1
+
+def running_on_ec2():
+    log.debug("Check running on ec2")
+    return os.getenv("RUN_ENVIRONMENT").lower() == "ec2"
+
 def get_driver(debug=False):
     """Get new driver to run scraper
     Note: Chrome does not work headless
@@ -87,6 +102,9 @@ def get_driver(debug=False):
         selenium.webdriver.Firefox:
     """
     options = webdriver.FirefoxOptions()
+    if running_on_ec2():
+        log.debug(f"Running on ec2")
+        options.binary_location = '/home/ec2-user/firefox/firefox'
     options.add_argument('--log-level=3')
     options.add_argument('--ignore-certificate-errors')
     options.add_argument('--incognito')

@@ -1,4 +1,4 @@
-from util import flatten_gmaps_response
+from util import flatten_gmaps_response, get_range
 from gmaps import get_info
 import json
 from os import path
@@ -90,6 +90,11 @@ class LDP:
         df = pd.read_csv(self.input_filename) 
         if self.filter:
             df = df[self.filter(df)]  
+        
+        range_start, range_end = get_range()
+        if (range_start, range_end) != (-1,-1):
+            log.debug(f"Using range {range_start} to {range_end}")
+            df = df.iloc[range_start:range_end]
 
         df = df.merge(df.apply(lambda row: self.get_gmaps_info(row), axis=1), left_index=True, right_index=True)
         df.to_csv(self.output_filename)
