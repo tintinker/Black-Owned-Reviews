@@ -5,6 +5,7 @@ __pycache__/
 output/
 city_directories/
 testing/
+from_ec2/
 
 citylist.txt
 ld2.py

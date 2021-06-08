@@ -1,5 +1,9 @@
 from ldp import LDP
 import parsers
+import logging
+
+logging.basicConfig(filename='scraper_run.log', encoding='utf-8', level=logging.DEBUG)
+
 
 if __name__ == '__main__':
     lst = [
