@@ -60,7 +60,8 @@ def wait_for_new_reviews(driver, prev_num, max_num):
     scroll_to_bottom_reviews(driver)
     review_elems = driver.find_elements_by_xpath("//div[@class='ODSEW-ShBeI-content']")
     
-    for _ in range(REVIEWS_MAX_TRIES):
+    for i in range(REVIEWS_MAX_TRIES):
+        print(f"Try {i}:")
         time.sleep(REVIEWS_DELAY)
         if len(review_elems) > prev_num:
             return True, len(review_elems)
@@ -81,12 +82,17 @@ def get_reviews(driver):
     time.sleep(DELAY)
     
     avg_rev_elems = driver.find_elements_by_xpath("//div[@class='gm2-display-2']")
-    avg_rating = float(avg_rev_elems[0].text) if len(avg_rev_elems) > 0 else -1
+    try:
+        avg_rating = float(avg_rev_elems[0].text) if len(avg_rev_elems) > 0 else -1
+    except:
+        avg_rating = -1
 
     total_rev_elems = driver.find_elements_by_xpath("//div[@class='gm2-caption']")
-    valid_total_counts = [float(e.text.strip()[:-len(" reviews")].replace(",","")) for e in total_rev_elems if e.text.strip().endswith(" reviews")]
-    num_ratings = valid_total_counts[0] if len(valid_total_counts) > 0 else -1
-
+    try:
+        valid_total_counts = [float(e.text.strip()[:-len(" reviews")].replace(",","")) for e in total_rev_elems if e.text.strip().endswith(" reviews")]
+        num_ratings = valid_total_counts[0] if len(valid_total_counts) > 0 else -1
+    except:
+        num_ratings = -1
     previous_num_reviews = 0
     if avg_rating < 0 or num_ratings < 0:
             return avg_rating, num_ratings, []
@@ -131,8 +137,12 @@ def get_info(search_url, debug=False):
             driver.quit()
             return gmaps_reponse(labels, reviews)
         elif not check_redirected(driver) and check_suggestion_available(driver):
-            driver.get(get_first_suggestion(driver))
-            followed_suggestion = True
+            suggestion = get_first_suggestion(driver)
+            if suggestion:
+                driver.get(get_first_suggestion(driver))
+                followed_suggestion = True
+            else:
+                continue
 
     labels = labels_not_found(search_url) if followed_suggestion else name_not_found(search_url)
     reviews = reviews_response(search_url, get_reviews(driver)) if check_redirected(driver) else no_reviews_response("name_not_found", search_url)
