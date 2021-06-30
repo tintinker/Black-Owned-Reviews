@@ -39,6 +39,11 @@ If not: `$ source env/bin/activate`
 Cache files will be generated throughout (ex. `city_directories/seattlecache.csv`, output available in csv form at the end (ex. `city_directories/seattleoutput.csv`)
 
 ## Run the scraper [Amazon EC2]
+
+UPDATE:
+Use main branch  and just `source .env.ec2` instead of `source .env.local`
+
+OUTDATED:
 On local computer:   
 1. Switch to ec2 branch   
 Follow steps 2-4 from above   
