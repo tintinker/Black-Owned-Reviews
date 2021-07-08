@@ -1,83 +1,76 @@
+from jsonparsers import parse_response, parse_review_list
 import os
-from selenium import webdriver
+from seleniumwire import webdriver
 import logging
+import psycopg2
+
 
 log = logging.getLogger(__name__)
+MAX_REVIEW_TEXT_LENGTH = 1250
 
-def gmaps_reponse(labels_response, reviews_response):
-    return {
-        "labels": labels_response,
-        "reviews": reviews_response
-    }
+def get_db_connection():
+    conn = psycopg2.connect(os.getenv("DB_CONNECTION_STRING"))
+    conn.autocommit = True
+    return conn
 
-def flatten_gmaps_response(response):
-    flattened = {}
-    for key in response["labels"]:
-        flattened[f"labels_{key}"] = response["labels"][key]
-    for key in response["reviews"]:
-        flattened[f"reviews_{key}"] = response["reviews"][key]
-    return flattened
 
-def not_found_response(error_type, followed_suggestion, url):
-    """Auxilary function for generating an error response. This function should not be exported. Use name_not_found orlabels_not_fund instead
-    """
-    return {
-        "success": False, 
-        "error_type": error_type,
-        "url": url,
-        "category": None,
-        "followed_suggestion": followed_suggestion,
-        "lgbtq": None, 
-        "veteran": None, 
-        "women": None, 
-        "black": None
-    }
+def check_cache(cursor, url_id):
+    try:
+        cursor.execute("SELECT * from cache WHERE url_id = %s", (url_id,))
+        if cursor.fetchone() is not None:
+            return True
+    except psycopg2.Error as e:
+        log.error(f"DB Error checking cache: {e}")
+    return False
 
-def labels_response(panel_text, category, followed_suggestion):
-    return {
-        "success": True,
-        "error_type": None,
-        "url": None,
-        "category": category,
-        "followed_suggestion": followed_suggestion,
-        "lgbtq": bool("LGBTQ friendly" in panel_text),
-        "veteran": bool("Identifies as veteran-led" in panel_text),
-        "women": bool("Identifies as women-led" in panel_text),
-        "black": bool("Identifies as Black-owned" in panel_text),
-    }
+def save_cache(cursor, url_id):
+    try:
+        cursor.execute(f"INSERT INTO cache(url_id) VALUES (%s)", (url_id,))
+    except psycopg2.Error as e:
+        log.error(f"DB Error inserting into cache: {e}")
 
-def reviews_response(search_url, review_tuple):
-    avg_rating, num_ratings, text_list =  review_tuple
+def submit_place_data(cursor, search_url_id, place_data_tuple):
+    (tags, labels, descriptors) = place_data_tuple
+    try:
+        cursor.execute(f"INSERT INTO tags(url_id, tags) VALUES (%s,%s)",(search_url_id,tags))
+    except psycopg2.Error as e:
+        log.error(f"DB Error inserting place data tags: {e}")
+    try:
+        cursor.execute(f"INSERT INTO labels(url_id, black, women, lgbtq, veteran) VALUES (%s,%s,%s,%s,%s)", (search_url_id,labels['black'],labels['women'],labels['lgbtq'],labels['veteran']))
+    except psycopg2.Error as e:
+        log.error(f"DB Error inserting place data labels: {e}")
+    try:
+        cursor.execute(f"INSERT INTO descriptors(url_id, descriptors) VALUES (%s,%s)",(search_url_id,descriptors))
+    except psycopg2.Error as e:
+        log.error(f"DB Error inserting place data descriptors: {e}")
 
-    if avg_rating is None or num_ratings is None:
-        return no_reviews_response("review_link_not_found", search_url)
-    if avg_rating < 0 or num_ratings < 0:
-        return no_reviews_response("summary_not_found", search_url)
+def submit_review_summaries(cursor, search_url_id, review_summary_tuple):
+    (avg_rating, num_ratings, num_downloaded) = review_summary_tuple
+    try:
+        cursor.execute(f"INSERT INTO review_summary(url_id, avg_rating, num_reviews, num_downloaded_reviews) VALUES (%s,%s,%s,%s)",(search_url_id,avg_rating,num_ratings,num_downloaded))
+    except psycopg2.Error as e:
+        log.error(f"DB Error inserting review summary data: {e}")
 
-    return {
-        "success": True,
-        "error_type": None,
-        "url": None,
-        "avg_rating": avg_rating,
-        "num_ratings": num_ratings,
-        "text_list": text_list
-    }
+def trunc_text(text, max_length):
+    if text and type(text) is str:
+        return text[:max_length]
+    return text
+def submit_reviews(cursor, search_url_id, request_url):
+    review_list = parse_review_list(parse_response(request_url))
+    review_tuples =  [(search_url_id, r["author_id"], r["author_name"], r["timeframe"], trunc_text(r["text"], MAX_REVIEW_TEXT_LENGTH),r["rating"]) for r in review_list]
+    args_str = ','.join(cursor.mogrify("(%s,%s,%s,%s,%s,%s)", t).decode("utf-8") for t in review_tuples)
+    try:
+        cursor.execute("INSERT INTO reviews(shop_url_id, author_id, author_name, timeframe, text, rating) VALUES " + args_str) 
+    except psycopg2.Error as e:
+        log.error(f"DB Error inserting review data: {e}")
+    return len(review_list)
 
-def no_reviews_response(error_type, search_url):
-    return {
-        "success": True,
-        "error_type": error_type,
-        "url": search_url,
-        "avg_rating": None,
-        "num_ratings": None,
-        "text_list": None
-    }
+def submit_followed_suggestion(cursor, url_id, was_ad = False):
+    try:
+        cursor.execute(f"INSERT INTO followed_suggestion(url_id,followed,was_ad) VALUES (%s,%s,%s)",(url_id,True, was_ad))
+    except psycopg2.Error as e:
+        log.error(f"DB Error inserting into followed_suggestion: {e}")
 
-def name_not_found(url):
-    return not_found_response("missing_name", False, url)
-
-def labels_not_found(url):
-    return not_found_response("missing_labels", True, url)
 
 def get_range():
     try:

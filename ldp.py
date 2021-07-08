@@ -1,9 +1,11 @@
-from util import flatten_gmaps_response, get_range
+import psycopg2
+from util import check_cache, get_db_connection, get_range, save_cache
 from gmaps import get_info
 import json
 from os import path
 import pandas as pd
 import logging
+from tqdm import tqdm
 
 log = logging.getLogger(__name__)
 
@@ -37,6 +39,9 @@ class LDP:
             debug (bool, optional): If False, run headless. Defaults to False.
             use_cache (bool, optional): [description]. Defaults to True.
         """
+        self.db_connection = get_db_connection()
+        self.cursor  = self.db_connection.cursor()
+
         self.input_filename = filename
         self.cache_filename = cache_filename
         self.output_filename = output_filename
@@ -57,6 +62,10 @@ class LDP:
         except: #if file doesn't exist or is ilformated, use empty
             self.cache = {}
 
+    def __del__(self):
+        self.cursor.close()
+        self.db_connection.close()
+
     def get_gmaps_info(self, row):
         """Generate url, and extract labels using cache or scraper
         """
@@ -65,28 +74,27 @@ class LDP:
         
         try:
             url = f'https://www.google.com/maps/search/{plus_replace(name)}+near+{plus_replace(addr)}'
+            url_id = f'{name} near {addr}'[:50]
         except: #if problem with address or name, skip
-            return pd.Series({'success': False, 'error_type': "missing_name_or_addr", 'lgbtq': None, 'veteran': None, 'women': None, 'black': None})
+            return
         
         log.debug(f"{name} | {addr} | {url}")
 
-        if url in self.cache and self.use_cache:
-            log.debug(f"Using Cache for {name}")
-            gmaps_info = self.cache[url]
-        else:
-            gmaps_info = get_info(url, debug=self.debug)
-            self.cache[url] = gmaps_info
-        
-        if self.use_cache:
-            log.debug(f"Saving Cache to {self.cache_filename}")
-            with open(self.cache_filename, 'w+') as f:
-                json.dump(self.cache, f)
+        if self.use_cache and check_cache(self.cursor, url_id):
+            return
+            
+        get_info(self.cursor, url, url_id, debug=self.debug)
 
-        return pd.Series(flatten_gmaps_response(gmaps_info))
+        if self.use_cache:
+            save_cache(self.cursor, url_id)
+
+        self.db_connection.commit()
 
     def process(self):
         """Run the script on the entire city directory file
         """
+        tqdm.pandas()
+
         df = pd.read_csv(self.input_filename) 
         if self.filter:
             df = df[self.filter(df)]  
@@ -96,8 +104,6 @@ class LDP:
             log.debug(f"Using range {range_start} to {range_end}")
             df = df.iloc[range_start:range_end]
 
-        df = df.merge(df.apply(lambda row: self.get_gmaps_info(row), axis=1), left_index=True, right_index=True)
-        df.to_csv(self.output_filename)
-        return df
+        df.progress_apply(self.get_gmaps_info, axis=1)
 
 

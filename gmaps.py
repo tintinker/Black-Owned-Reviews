@@ -4,18 +4,31 @@ Scraper to extract labels from gmaps entry
 @author Justin Tinker (jatinker@stanford.edu)
 """
 # -*- coding: utf-8 -*-
-from util import get_driver, gmaps_reponse, labels_response, name_not_found, labels_not_found, no_reviews_response, reviews_response
+import json
+from jsonparsers import parse_place, parse_response
+from util import submit_followed_suggestion, submit_place_data, submit_review_summaries, submit_reviews, get_driver
 import time
 import logging
+from selenium.common.exceptions import TimeoutException
+
 
 log = logging.getLogger(__name__)
 
-MAX_TRIES = 4 #number of times to look for indicators that label information has loaded
-DELAY = 2 #number of seconds to wait between tries
+MAX_REVIEWS = 100
+
+CLICK_DELAY = 2
+
+REDIRECT_MAX_TRIES = 3
+REDIRECT_DELAY = 2
+
+PLACE_MAX_TRIES = 4 #number of times to look for indicators that label information has loaded
+PLACE_DELAY = 1 #number of seconds to wait between tries
 
 REVIEWS_DELAY = 1
-REVIEWS_MAX_TRIES = 3
+REVIEWS_MAX_TRIES = 5
 
+PLACE_API_IDENTIFIER = "maps/preview/place"
+REVIEW_API_IDENTIFIER = "maps/preview/review/listentitiesreviews"
 PLACE_URL_IDENTIFIER = "google.com/maps/place" #indicates gmaps has found the place we're searching for
 PANEL_LOADED_IDENTIFIERS = ['Suggest an edit', 'About this data'] #presence of one of these texts indicates label information has loaded
 SUGGESTION_IDENTIFIERS = ['Partial match', 'Partial matches', 'Showing results']
@@ -28,9 +41,11 @@ def get_panel_text(driver):
     return panel_text
 
 def get_first_suggestion(driver):
-    for elem in driver.find_elements_by_xpath("//a[@href]"):
+    ad = len(list(driver.find_elements_by_xpath("//div[contains(@aria-label,'Results') and //span[. = ' Ad ']]"))) > 0
+    for elem in driver.find_elements_by_xpath("//div[contains(@aria-label,'Results')]//a[@href]"):
         if PLACE_URL_IDENTIFIER in str(elem.get_attribute("href")):
-            return str(elem.get_attribute("href"))
+            return str(elem.get_attribute("href")), ad
+    return None, ad
 
 def check_redirected(driver):
     return PLACE_URL_IDENTIFIER in driver.current_url
@@ -53,34 +68,66 @@ def scroll_to_bottom(driver):
 def scroll_to_bottom_reviews(driver):
     driver.execute_script("Array.from(document.getElementsByClassName('section-scrollbox')).map(div => div.scrollTop = div.scrollHeight)")
 
-def wait_for_new_reviews(driver, prev_num, max_num):
-    if prev_num >= max_num:
-        return False, prev_num
+def check_new_review_api_call(driver, prev_api_calls):
+    for _ in range(REVIEWS_MAX_TRIES):
+        for req in driver.requests:
+            if req and req.response and req.response.headers['Content-Type'].startswith("application/json") and REVIEW_API_IDENTIFIER in req.url and req.url not in prev_api_calls:
+                prev_api_calls.add(req.url)
+                return req.url
+        time.sleep(REVIEWS_DELAY)
+    return None
+
+def check_place_api_call(driver):
+    for _ in range(PLACE_MAX_TRIES):
+        for req in driver.requests:
+            if req and req.response and req.response.headers['Content-Type'].startswith("application/json") and "maps/preview/place" in req.url:
+                return req.url
+        time.sleep(PLACE_DELAY)
+    return None
+
+def wait_for_new_reviews(driver, prev_num, max_num, prev_api_calls):
+    if prev_num >= MAX_REVIEWS or prev_num >= max_num:
+        return None
 
     scroll_to_bottom_reviews(driver)
-    review_elems = driver.find_elements_by_xpath("//div[@class='ODSEW-ShBeI-content']")
+    try:
+        request_url = check_new_review_api_call(driver, prev_api_calls)
+        return request_url
+    except TimeoutException:
+        return None
+
+def get_reviews(cursor, url_id, driver):
+    (avg_rating, num_ratings) = -1, -1
+    default_labels = {"black": False, "women": False, "lgbtq": False, "veteran": False}
+    place_data = ([], default_labels, [])
+    current_num_reviews = 0
     
-    for i in range(REVIEWS_MAX_TRIES):
-        print(f"Try {i}:")
-        time.sleep(REVIEWS_DELAY)
-        if len(review_elems) > prev_num:
-            return True, len(review_elems)
-        scroll_to_bottom_reviews(driver)
-    return False, prev_num
-
-def get_category(driver):
-    elems = driver.find_elements_by_xpath("//button[@jsaction='pane.rating.category']")
-    return elems[0].text if len(elems) > 0 else ""
-
-def get_reviews(driver):
-    elems = driver.find_elements_by_xpath("//div[@jsaction='pane.reviewChart.moreReviews']")
-    if len(elems) > 0:
-        elems[0].click()
-    else:
-        return None, None, []
-
-    time.sleep(DELAY)
+    def try_click(xpath_selector):
+        elems = driver.find_elements_by_xpath(xpath_selector)
+        if len(elems) > 0:
+            try:
+                elems[0].click()
+                return True
+            except:
+                return False
+        print("fail",  xpath_selector)
+        return False
     
+    if not try_click("//div[@jsaction='pane.reviewChart.moreReviews']"):
+        return (avg_rating, num_ratings, current_num_reviews), place_data
+    
+    time.sleep(CLICK_DELAY)
+
+    if not try_click("//img[@alt='Sort']"):
+        return (avg_rating, num_ratings, current_num_reviews), place_data
+
+    time.sleep(CLICK_DELAY)
+
+    if not try_click("//li[@class='nbpPqf-menu-x3Eknd' and div/div[. = 'Newest']]"):
+        return (avg_rating, num_ratings, current_num_reviews), place_data
+
+    time.sleep(CLICK_DELAY)
+
     avg_rev_elems = driver.find_elements_by_xpath("//div[@class='gm2-display-2']")
     try:
         avg_rating = float(avg_rev_elems[0].text) if len(avg_rev_elems) > 0 else -1
@@ -93,18 +140,31 @@ def get_reviews(driver):
         num_ratings = valid_total_counts[0] if len(valid_total_counts) > 0 else -1
     except:
         num_ratings = -1
-    previous_num_reviews = 0
+    
+    place_api_url = check_place_api_call(driver)
+    if place_api_url:
+        place_data = parse_place(parse_response(place_api_url))
+    else:
+        return (avg_rating, num_ratings, current_num_reviews), place_data
+    
     if avg_rating < 0 or num_ratings < 0:
-            return avg_rating, num_ratings, []
+        return (avg_rating, num_ratings, current_num_reviews), place_data
+
+    prev_api_calls = set()
 
     while True:
-        another, previous_num_reviews = wait_for_new_reviews(driver, previous_num_reviews, num_ratings)
-        if not another:
+        review_api_url = wait_for_new_reviews(driver, current_num_reviews, num_ratings, prev_api_calls)
+        if not review_api_url:
             break
-    
-    return avg_rating, num_ratings, [review_elem.text for review_elem in driver.find_elements_by_xpath("//div[@class='ODSEW-ShBeI-content']")]
+        current_num_reviews += submit_reviews(cursor, url_id, review_api_url)
 
-def get_info(search_url, debug=False):
+    return (avg_rating, num_ratings, current_num_reviews), place_data
+
+
+
+
+
+def get_info(cursor, search_url, url_id,  debug=False):
     """Get the labels (black owned, women-led, etc.) for a particular business on googlemaps
 
     Args:
@@ -126,26 +186,23 @@ def get_info(search_url, debug=False):
     driver = get_driver(debug)
     driver.get(search_url)
 
-    followed_suggestion = False
-
-    for _ in range(MAX_TRIES):
-        time.sleep(DELAY)
+    for _ in range(REDIRECT_MAX_TRIES):
+        time.sleep(REDIRECT_DELAY)
         scroll_to_bottom(driver)
+
         if check_redirected(driver) and check_identifiers_loaded(driver):
-            labels = labels_response(get_panel_text(driver), get_category(driver), followed_suggestion)
-            reviews = reviews_response(search_url, get_reviews(driver))
-            driver.quit()
-            return gmaps_reponse(labels, reviews)
+            reviews_summary, place_data = get_reviews(cursor, url_id, driver)
+            submit_review_summaries(cursor, url_id, reviews_summary)
+            submit_place_data(cursor, url_id, place_data)
+            break
+        
         elif not check_redirected(driver) and check_suggestion_available(driver):
-            suggestion = get_first_suggestion(driver)
+            suggestion, ad = get_first_suggestion(driver)
+            
             if suggestion:
-                driver.get(get_first_suggestion(driver))
-                followed_suggestion = True
+                driver.get(suggestion)
+                submit_followed_suggestion(cursor, url_id, ad)
             else:
                 continue
 
-    labels = labels_not_found(search_url) if followed_suggestion else name_not_found(search_url)
-    reviews = reviews_response(search_url, get_reviews(driver)) if check_redirected(driver) else no_reviews_response("name_not_found", search_url)
     driver.quit()
-    
-    return gmaps_reponse(labels, reviews)
