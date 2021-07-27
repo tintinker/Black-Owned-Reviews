@@ -2,7 +2,7 @@ from ldp import LDP
 import csvparsers
 import logging
 
-logging.basicConfig(filename='scraper_run.log', level=logging.ERROR)
+logging.basicConfig(filename='scraper_run.log', level=logging.INFO)
 
 
 if __name__ == '__main__':

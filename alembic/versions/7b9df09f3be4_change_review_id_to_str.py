@@ -17,8 +17,8 @@ depends_on = None
 
 
 def upgrade():
-    op.drop_column('reviews', 'author_id')
-    op.add_column('reviews', sa.Column('author_id', sa.String(20), nullable=False))
+    op.drop_column('reviews', 'avg_rating')
+    op.add_column('reviews', sa.Column('avg_rating', sa.Float, nullable=False))
 
 
 def downgrade():

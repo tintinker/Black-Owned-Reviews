@@ -10,21 +10,30 @@ from util import submit_followed_suggestion, submit_place_data, submit_review_su
 import time
 import logging
 from selenium.common.exceptions import TimeoutException
-
+from random import randrange
 
 log = logging.getLogger(__name__)
 
 MAX_REVIEWS = 100
 
-CLICK_DELAY = 2
+MIN_CLICK_DELAY = 10
+def random_click_delay():
+    return MIN_CLICK_DELAY + randrange(0, 15)
 
 REDIRECT_MAX_TRIES = 3
-REDIRECT_DELAY = 2
+MIN_REDIRECT_DELAY = 10
+def random_redirect_delay():
+    return MIN_REDIRECT_DELAY + randrange(0, 15)
 
 PLACE_MAX_TRIES = 4 #number of times to look for indicators that label information has loaded
-PLACE_DELAY = 1 #number of seconds to wait between tries
+MIN_PLACE_DELAY = 5 #number of seconds to wait between tries
+def random_place_delay():
+    return MIN_PLACE_DELAY + randrange(0, 15)
 
-REVIEWS_DELAY = 1
+MIN_REVIEWS_DELAY = 5
+def random_reviews_delay():
+    return MIN_REVIEWS_DELAY + randrange(0, 15)
+
 REVIEWS_MAX_TRIES = 5
 
 PLACE_API_IDENTIFIER = "maps/preview/place"
@@ -74,7 +83,7 @@ def check_new_review_api_call(driver, prev_api_calls):
             if req and req.response and req.response.headers['Content-Type'].startswith("application/json") and REVIEW_API_IDENTIFIER in req.url and req.url not in prev_api_calls:
                 prev_api_calls.add(req.url)
                 return req.url
-        time.sleep(REVIEWS_DELAY)
+        time.sleep(random_reviews_delay())
     return None
 
 def check_place_api_call(driver):
@@ -82,7 +91,7 @@ def check_place_api_call(driver):
         for req in driver.requests:
             if req and req.response and req.response.headers['Content-Type'].startswith("application/json") and "maps/preview/place" in req.url:
                 return req.url
-        time.sleep(PLACE_DELAY)
+        time.sleep(random_place_delay())
     return None
 
 def wait_for_new_reviews(driver, prev_num, max_num, prev_api_calls):
@@ -101,7 +110,9 @@ def get_reviews(cursor, url_id, driver):
     default_labels = {"black": False, "women": False, "lgbtq": False, "veteran": False}
     place_data = ([], default_labels, [])
     current_num_reviews = 0
-    
+    print("set defaults")
+    log.info("set defaults")
+
     def try_click(xpath_selector):
         elems = driver.find_elements_by_xpath(xpath_selector)
         if len(elems) > 0:
@@ -114,23 +125,36 @@ def get_reviews(cursor, url_id, driver):
         return False
     
     if not try_click("//div[@jsaction='pane.reviewChart.moreReviews']"):
+        print("more reviews click failed")
+        log.info("more reviews click failed")
+
         return (avg_rating, num_ratings, current_num_reviews), place_data
     
-    time.sleep(CLICK_DELAY)
+    time.sleep(random_click_delay())
 
     if not try_click("//img[@alt='Sort']"):
+        print("sort click failed")
+        log.info("sort click failed")
         return (avg_rating, num_ratings, current_num_reviews), place_data
 
-    time.sleep(CLICK_DELAY)
+    time.sleep(random_click_delay())
 
     if not try_click("//li[@class='nbpPqf-menu-x3Eknd' and div/div[. = 'Newest']]"):
+        print("newestt click failed")
+        log.info("newestt click failed")
         return (avg_rating, num_ratings, current_num_reviews), place_data
 
-    time.sleep(CLICK_DELAY)
+    time.sleep(random_click_delay())
+
+    print("all sort clicks succeeded")
+    log.info("all sort clicks succeeded")
 
     avg_rev_elems = driver.find_elements_by_xpath("//div[@class='gm2-display-2']")
     try:
         avg_rating = float(avg_rev_elems[0].text) if len(avg_rev_elems) > 0 else -1
+        print(f"got avg rating: {avg_rating}")
+        log.info(f"got avg rating: {avg_rating}")
+
     except:
         avg_rating = -1
 
@@ -138,16 +162,25 @@ def get_reviews(cursor, url_id, driver):
     try:
         valid_total_counts = [float(e.text.strip()[:-len(" reviews")].replace(",","")) for e in total_rev_elems if e.text.strip().endswith(" reviews")]
         num_ratings = valid_total_counts[0] if len(valid_total_counts) > 0 else -1
+        print(f"got num ratings: {num_ratings}")
+        log.info(f"got num ratings: {num_ratings}")
+
     except:
         num_ratings = -1
     
     place_api_url = check_place_api_call(driver)
     if place_api_url:
+        print("found place api url")
+        log.info("found place api url")
         place_data = parse_place(parse_response(place_api_url))
     else:
+        print("did not find place api url")
+        log.info("did not find place api url")
         return (avg_rating, num_ratings, current_num_reviews), place_data
     
     if avg_rating < 0 or num_ratings < 0:
+        print("0 check failed")
+        log.info("0 check failed")
         return (avg_rating, num_ratings, current_num_reviews), place_data
 
     prev_api_calls = set()
@@ -157,6 +190,9 @@ def get_reviews(cursor, url_id, driver):
         if not review_api_url:
             break
         current_num_reviews += submit_reviews(cursor, url_id, review_api_url)
+
+    print("got all reviews needed")
+    log.info("got all reviews needed")
 
     return (avg_rating, num_ratings, current_num_reviews), place_data
 
@@ -185,18 +221,24 @@ def get_info(cursor, search_url, url_id,  debug=False):
 
     driver = get_driver(debug)
     driver.get(search_url)
+    print(f"got search url id: {url_id}")
+    log.info(f"got search url id: {url_id}")
 
     for _ in range(REDIRECT_MAX_TRIES):
-        time.sleep(REDIRECT_DELAY)
+        time.sleep(random_redirect_delay())
         scroll_to_bottom(driver)
 
         if check_redirected(driver) and check_identifiers_loaded(driver):
+            print("redirected and identifiers loaded")
+            log.info("redirected and identifiers loaded")
             reviews_summary, place_data = get_reviews(cursor, url_id, driver)
             submit_review_summaries(cursor, url_id, reviews_summary)
             submit_place_data(cursor, url_id, place_data)
             break
         
         elif not check_redirected(driver) and check_suggestion_available(driver):
+            print("suggestion available")
+            log.info("suggestion available")
             suggestion, ad = get_first_suggestion(driver)
             
             if suggestion:
@@ -204,5 +246,6 @@ def get_info(cursor, search_url, url_id,  debug=False):
                 submit_followed_suggestion(cursor, url_id, ad)
             else:
                 continue
-
+    print("quitting")
+    log.info("quitting")
     driver.quit()
